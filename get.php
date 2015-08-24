@@ -1,25 +1,60 @@
 <?
 require_once('phpQuery-onefile.php');
+require "RollingCurlMini.php";
 
-// для подсчета времени выполнения
 $start = microtime(true);
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, "http://www.mamainfo.ru/forum/viewtopic.php?p=12141#12141");
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+$output = curl_exec($ch);
+$document = phpQuery::newDocumentHTML($output);
+curl_close($ch);
+echo $document;
 
-/*
-    Функция возвращает массив:
-    название марки авто, количество объявлений, ссылка
-*/
-function get_marks()
-{
-    $url = 'http://www.mamainfo.ru/forum/viewtopic.php?p=12141#12141';
+//-------------------------------------------------------------------
+// для подсчета времени выполнения
+//$start = microtime(true);
+//
+//$urls = array(
+//    'http://www.mamainfo.ru/forum/viewtopic.php?p=12141#12141',
+//    'http://nedvigimost.bbok.ru/viewtopic.php?id=987#p1476 ',
+//    'http://ruall.com/biznes-idei-i-sozdanie-novogo-biznesa/5879-kakim-biznesom-zanyatsya/Page-4.html#6713'
+//);
+//
+///*
+//    Функция возвращает массив:
+//    название марки авто, количество объявлений, ссылка
+//*/
+//
+//function callback($response, $info, $request) {
+//    // Обработка результатов
+////    $document = phpQuery::newDocumentHTML($response);
+////    echo '<pre>';
+////    print_r($document);
+////    echo '</pre>';
+//}
+//
+//$rc = new RollingCurlMini("callback");
+//$rc->window_size = 20; // Количество одновременных соединений
+//
+//foreach ($urls as $url) {
+//    $rc->get($url); // Формируем очередь запросов
+//}
+//
+//$rc->execute(); // Запускаем
 
-    $html = file_get_contents($url);
-    $document = phpQuery::newDocumentHTML($html);
-//    $document = phpQuery::newDocumentXML($html);
-    $hentry['name'] = $document->find('a')->text();
-    $links = $document->find('a');
-    foreach($links as $key){
-        $links_arr[] = pq($key)->attr('href');
-    }
+//function get_marks()
+//{
+//    $url = 'http://www.mamainfo.ru/forum/viewtopic.php?p=12141#12141';
+//
+//    $html = file_get_contents($url);
+//    $document = phpQuery::newDocumentHTML($html);
+////    $document = phpQuery::newDocumentXML($html);
+//    $hentry['name'] = $document->find('a')->text();
+//    $links = $document->find('a');
+//    foreach($links as $key){
+//        $links_arr[] = pq($key)->attr('href');
+//    }
    // $hentry['url'] = $document->find('a');
   //  phpQuery::newDocument($html);
 
@@ -34,17 +69,17 @@ function get_marks()
 //        $marks[$mark_name]['url'] = $url.pq($mark)->find('a')->attr('href');
 //    }
 //
-    unset($html);
+//    unset($html);
 
-    return $links_arr;
-}
+//    return $links_arr;
+//}
 
 // выполняем функцию
-$marks_array = get_marks();
+//$marks_array = get_marks();
 
 // выводим массив на экран
-echo '<pre>';
-print_r($marks_array);
-echo '</pre>';
+//echo '<pre>';
+//print_r($marks_array);
+//echo '</pre>';
 
 echo '<strong>Время выполнения скрипта: '.(microtime(true) - $start).' сек.</strong>';
