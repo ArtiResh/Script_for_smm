@@ -14,7 +14,7 @@ $callback = function($document,$url,$code) {
     $local_result['nfl'] = false;
     $local_result['nix'] = false;
     $local_result['rd'] = false;
-    if($code ===200) {
+    if($code === 200) {
         $document = mb_convert_encoding($document, 'utf-8', mb_detect_encoding($document));
         $data = str_get_html($document);
         $item_head = false;
