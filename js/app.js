@@ -12,7 +12,8 @@ var result;
 $(document).ready(function(){
     $.ajax({
         url: "get.php",
-        data: links,
+        data: {links:links},
+        type: "POST",
         success: function(data) {
             console.log(data);
             result = data;
