@@ -10,47 +10,50 @@
 <div class="list-links" ng-controller="MainCtrl">
     <div class="row">
         <div>
-            <a href="#" ng-click="checker('showLive')">Живые [{{filteredLink.live.length}}]</a>
+            <a href="#" ng-click="checker('showLive')">Живые [<span ng-if="filteredLink.live.length == 0">0</span>{{filteredLink.live.length}}]</a>
         </div>
         <div>&nbsp;</div>
         <div>
-            <a href="#" ng-click="checker('showDead')">Мертвые [{{filteredLink.dead.length}}]</a>
+            <a href="#" ng-click="checker('showDead')">Мертвые [<span ng-if="filteredLink.dead.length == 0">0</span>{{filteredLink.dead.length}}]</a>
         </div>
         <div>&nbsp;</div>
         <div>
-            NF [{{filteredLink.nofollow.length}}]
+            NF [<span ng-if="filteredLink.nofollow.length == 0">0</span>{{filteredLink.nofollow.length}}]
         </div>
         <div>&nbsp;</div>
         <div>
-            NI [{{filteredLink.noindex.length}}]
+            NI [<span ng-if="filteredLink.noindex.length == 0">0</span>{{filteredLink.noindex.length}}]
         </div>
         <div>&nbsp;</div>
         <div>
-            RD [{{filteredLink.redirect.length}}]
+            RD [<span ng-if="filteredLink.redirect.length == 0">0</span>{{filteredLink.redirect.length}}]
         </div>
     </div>
 
     <div class="row">&nbsp;</div>
 
     <div class="row col-md-10">
-        <div ng-if="heroes.length == 0"><b>No Heroes Found!</b>
-        </div>
-        <div ng-repeat="link in filteredLink.live" ng-show="showLive">
-            <span>{{link.url}}</span>
-            <span ng-show="MoreInf">{{link.nfl}}</span>
-            <span ng-show="MoreInf">{{link.nix}}</span>
-            <span ng-show="MoreInf">{{link.rd}}</span>
+        <div ng-repeat="link in filteredLink.live | customFilter:positions" ng-show="showLive">
+            <span ng-bind="$index+positions.start"></span>
+            <span ng-bind="link.url"></span>
+            <span ng-show="MoreInf" ng-bind="link.nfl"></span>
+            <span ng-show="MoreInf" ng-bind="link.nix"></span>
+            <span ng-show="MoreInf" ng-bind="link.rd"></span>
         </div>
         <div ng-repeat="link in filteredLink.dead" ng-show="showDead">
-            <span>{{link.url}}</span>
+            <span ng-bind="link[$index]+positions.start"></span>
+            <span ng-bind="link.url"></span>
 
         </div>
     </div>
     <a href="#" ng-click="parsedServe()">send</a>
+    <a href="#" ng-click="showMore()"  ng-show="More15">+15</a>
+    <a href="#" ng-click="showLess()"  ng-show="Less15">-15</a>
 </div>
 
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/angular.min.js"></script>
-<script src="js/app.js"></script>
+<script src="js/appppp.js"></script>
+<!--<script src="js/app.js"></script>-->
 </body>
 </html>

@@ -17,7 +17,7 @@ $callback = function($document,$url,$code) {
     $local_result['nix'] = false;
     $local_result['rd'] = false;
     if($code === 200) {
-        $document = mb_convert_encoding($document, 'utf-8', mb_detect_encoding($document));
+//        $document = mb_convert_encoding($document, 'utf-8', mb_detect_encoding($document));
         $data = str_get_html($document);
         $item_head = false;
         $head = $data->find("meta");
@@ -64,6 +64,7 @@ foreach ($params->links as $url) {
     $resp_once[] = new dHttp\Client($url, array(
         CURLOPT_SSL_VERIFYPEER => FALSE,
         CURLOPT_HEADER => TRUE,
+        CURLOPT_TIMEOUT=>120,
         CURLOPT_FOLLOWLOCATION=>TRUE,
         CURLOPT_IPRESOLVE=>'CURL_IPRESOLVE_V4',
         CURLOPT_RETURNTRANSFER=>TRUE
