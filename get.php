@@ -4,6 +4,8 @@ include_once('dHttp/Client.php');
 include_once('dHttp/Url.php');
 include_once('dHttp/Response.php');
 
+$params = json_decode(file_get_contents('php://input'));
+
 //$start = microtime(true);
 
 $result = array();
@@ -57,8 +59,7 @@ $callback = function($document,$url,$code) {
 };
 
 $multi = new dHttp\Client();
-
-foreach ($_POST['links'] as $url) {
+foreach ($params->links as $url) {
     $url = trim($url);
     $resp_once[] = new dHttp\Client($url, array(
         CURLOPT_SSL_VERIFYPEER => FALSE,
@@ -76,8 +77,5 @@ foreach($response_array as $item) {
 
 }
 echo json_encode($result);
-//echo '<pre>';
-//var_dump($result);
-//echo '</pre>';
-//
+
 //echo '<strong>Время выполнения скрипта: ' . (microtime(true) - $start) . ' сек.</strong>';
