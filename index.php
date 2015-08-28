@@ -18,7 +18,7 @@
             </p>
 
             <div>
-                http://<input type="text">
+                http://<input ng-model='target_link' ng-trim='false' type="text">
             </div>
         </div>
         <div class="input_listblock">
@@ -27,7 +27,7 @@
             </p>
 
             <div>
-                <textarea class="lists" placeholder="Не более 100 штук за 1 проверку"></textarea>
+                <textarea  ng-model='list_links' class="lists" placeholder="Не более 100 штук за 1 проверку"></textarea>
             </div>
         </div>
         <div class="in_excel">
@@ -51,46 +51,70 @@
     </div>
     <div class="out">
         <div class="out_headblock">
-            <p>Результаты проверки <span>100 постов</span></p>
+            <p>Результаты проверки <span>{{filteredLink.length}} постов</span></p>
 
-            <p>для ккккккккккккккююнг</p>
+            <p>для {{target_link}}</p>
         </div>
         <div class="subheader">
-            <a href="javascript:none;" ng-click="checker('showLive')" class="subheader_link chosen"><span class="slable">Живые</span>
-                <span class="headblock_count">10{{filteredLink.live.length}}</span>
+            <a href="javascript:none;" ng-click="checker('showLive')" class="subheader_link chosen"><span
+                    class="slable">Живые</span>
+                <span class="headblock_count">{{filteredLink.live.length}}</span>
             </a>
-            <a href="javascript:none;" ng-click="checker('showDead')" class="subheader_link"><span class="slable">Удаленные</span>
+            <a href="javascript:none;" ng-click="checker('showDead')" class="subheader_link del"><span class="slable">Удаленные</span>
                 <span class="headblock_count">{{filteredLink.dead.length}}</span>
             </a>
         </div>
         <div class="resultblock">
-            <div ng-repeat="link in filteredLink.live | customFilter:positions" ng-show="showLive">
-                <div class="number" ng-bind="$index+positions.start">1
-                </div>
-                <div ng-bind="link.url">http://www.sp-forum.ru/viewtopic.php?f=25&t=36116&p=139805#p139805</div>
-                <div class="shadow"></div>
-                <div class="add_info">
-                    <span ng-show="MoreInf" ng-bind="link.nfl"></span>
-                    <span ng-show="MoreInf" ng-bind="link.nix"></span>
-                    <span ng-show="MoreInf" ng-bind="link.rd"></span>
-                </div>
-            </div>
-            <div ng-repeat="link in filteredLink.dead | customFilter:positions" ng-show="showDead">
-                <div class="number" ng-bind="$index+positions.start">1
-                </div>
-                <div ng-bind="link.url">http://www.sp-forum.ru/viewtopic.php?f=25&t=36116&p=139805#p139805</div>
-                <div class="shadow"></div>
-                <div class="add_info">
-                    <span ng-show="MoreInf" ng-bind="link.nfl"></span>
-                    <span ng-show="MoreInf" ng-bind="link.nix"></span>
-                    <span ng-show="MoreInf" ng-bind="link.rd"></span>
-                </div>
+            <div class="loader" ng-show="loading" >
+                <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+  <path fill="#38BEA9" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
+      <animateTransform attributeType="xml"
+                        attributeName="transform"
+                        type="rotate"
+                        from="0 25 25"
+                        to="360 25 25"
+                        dur="0.6s"
+                        repeatCount="indefinite"/>
+  </path>
+  </svg>
             </div>
 
+
+                <div ng-repeat="link in filteredLink.live | customFilter:positions" ng-show="showLive" class="el_list_link">
+                    <div class="number" ng-bind="$index+positions.start">
+                    </div>
+                    <div class="link">
+                        <a href={{link.url}} target="_blank">{{link.url}}</a>
+                    </div>
+                    <div class="shadow"></div>
+                    <div ng-show="sofisticatedCheck" class="add_info">
+                                            <span ng-if=link.nfl>{{link.nfl}}</span>
+                                            <span ng-if=link.nfl>{{link.nix}}</span>
+                                            <span ng-if=link.nfl>{{link.rd}}</span>
+                    </div>
+                </div>
+
+
+            <div ng-repeat="link in filteredLink.dead | customFilter:positions" ng-show="showDead" class="el_list_link">
+                <div class="number" ng-bind="$index+positions.start">
+                </div>
+                <div class="link">
+                    <a href={{link.url}} target="_blank">{{link.url}}</a>
+                </div>
+                <div class="shadow"></div>
+                <div ng-show="sofisticatedCheck" class="add_info">
+                    <span ng-if=link.nfl>{{link.nfl}}</span>
+                    <span ng-if=link.nfl>{{link.nix}}</span>
+                    <span ng-if=link.nfl>{{link.rd}}</span>
+                </div>
+            </div>
+        </div>
         </div>
         <div class="next_prev">
-            <a href="javascript:none;" ng-click="showLess()" ng-show="Less15">← предыдущие 20</a>
-            <a href="javascript:none;" ng-click="showMore()" ng-show="More15">следующие 20 →</a>
+
+            <a href="javascript:none;" ng-click="showLess()" ng-show="Less15"><span>←</span> предыдущие 20</a>
+            <a href="javascript:none;" ng-click="showMore()" ng-show="More15" id="next">следующие 20 <span>→</span></a>
         </div>
         <div class="btn_green">
             Скопировать все живые
@@ -98,16 +122,16 @@
         <div class="btn_status">
             <ul>
                 <li class="copies">Скопировать все чистые ссылки
-                    <span></span>
+                    <span>{{filteredLink.live.length}}</span>
                 </li>
                 <li class="copies">Скопировать все ссылки с redirect
-                    <span ng-if="filteredLink.redirect.length == 0"></span>
+                    <span>{{filteredLink.nofollow.length}}</span>
                 </li>
                 <li class="copies">Скопировать все ссылки с noindex
-                    <span ng-if="filteredLink.noindex.length == 0"></span>
+                    <span>{{filteredLink.noindex.length}}</span>
                 </li>
                 <li class="copies">Скопировать все ссылки с nofollow
-                    <span ng-if="filteredLink.nofollow.length == 0"></span>
+                    <span>{{filteredLink.redirect.length}}</span>
                 </li>
             </ul>
         </div>

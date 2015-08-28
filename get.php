@@ -10,12 +10,12 @@ $params = json_decode(file_get_contents('php://input'));
 
 $result = array();
 
-$callback = function($document,$url,$code) {
+$callback = function($document,$url,$code,$target) {
     $local_result['url'] = $url;
     $local_result['live'] = true;
-    $local_result['nfl'] = false;
-    $local_result['nix'] = false;
-    $local_result['rd'] = false;
+    $local_result['nfl'] = '';
+    $local_result['nix'] = '';
+    $local_result['rd'] = '';
     if($code === 200) {
 //        $document = mb_convert_encoding($document, 'utf-8', mb_detect_encoding($document));
         $data = str_get_html($document);
@@ -32,8 +32,8 @@ $callback = function($document,$url,$code) {
             $item_head = explode(",", $item_head);
             foreach ($item_head as $key) {
                 $key = trim($key);
-                $key == "nofollow" ? $local_result['nfl'] = true : '';
-                $key == "noindex" ? $local_result['nix'] = true : '';
+                $key == "nofollow" ? $local_result['nfl'] = 'nf' : '';
+                $key == "noindex" ? $local_result['nix'] = 'nx' : '';
             }
         };
 
@@ -41,9 +41,9 @@ $callback = function($document,$url,$code) {
             $hook = false;
             foreach ($data->find('a') as $a) {
 
-                if (stripos($a->href, 'allmoscowoffices.ru')) {
-                    stripos($a->href, 'allmoscowoffices.ru') > 12 ? $local_result['rd'] = true : $local_result['rd'] = false;
-                    $a->rel == !"nofollow" && !($local_result['nfl']) ? $local_result['nfl'] = false : $local_result['nfl'] = true;
+                if (stripos($a->href, $target)) {
+                    stripos($a->href, $target) > 12 ? $local_result['rd'] = 'rd' : $local_result['rd'] = '';
+                    $a->rel != "nofollow" && !($local_result['nfl']==='nf') ? $local_result['nfl'] = '' : $local_result['nfl'] = 'nf';
                     $hook = true;
                 }
             }
@@ -67,14 +67,15 @@ foreach ($params->links as $url) {
         CURLOPT_TIMEOUT_MS => 120000,
         CURLOPT_FOLLOWLOCATION=>TRUE,
         CURLOPT_IPRESOLVE=>'CURL_IPRESOLVE_V4',
-        CURLOPT_RETURNTRANSFER=>TRUE
+        CURLOPT_RETURNTRANSFER=>TRUE,
+        CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.2) Gecko/20090729 Firefox/3.5.2 GTB5'
     ));
 }
 
 $response_array = $multi->multi($resp_once);
 
 foreach($response_array as $item) {
-    $result[] = $callback($item->getRaw(),$item->getUrl(),$item->getCode());
+    $result[] = $callback($item->getRaw(),$item->getUrl(),$item->getCode(),$params->target);
 
 }
 echo json_encode($result);
