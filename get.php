@@ -64,7 +64,7 @@ foreach ($params->links as $url) {
     $resp_once[] = new dHttp\Client($url, array(
         CURLOPT_SSL_VERIFYPEER => FALSE,
         CURLOPT_HEADER => TRUE,
-        CURLOPT_TIMEOUT=>120,
+        CURLOPT_TIMEOUT_MS => 120000,
         CURLOPT_FOLLOWLOCATION=>TRUE,
         CURLOPT_IPRESOLVE=>'CURL_IPRESOLVE_V4',
         CURLOPT_RETURNTRANSFER=>TRUE

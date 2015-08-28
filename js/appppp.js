@@ -28,31 +28,6 @@ var links=[
     'http://mfbi.ru/showthread.php?1791-%D0%98%D0%B4%D0%B5%D0%B8-%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B0-%D0%B0%D0%BA%D1%82%D0%B8%D0%B2%D0%BE%D0%B2-%D0%B1%D0%B5%D0%B7-%D0%B4%D0%B5%D0%BD%D0%B5%D0%B3'
 ];
 
-//app.factory('ListLinks', ['$http', function($http) {
-//    function ListLinks(linkData) {
-//        this.setData();
-//        //if (linkData) {
-//        //    this.setData(linkData);
-//        //}
-//        //что-то, что еще нужно для инициализации книги
-//    };
-//    ListLinks.prototype = {
-//        setData: function(linkData) {
-//            angular.extend(this, linkData);
-//        },
-//        load: function(id) {
-//            var scope = this;
-//            $http.post('get.php', {links: links}).success(function(response) {
-//                response = JSON.stringify(response);
-//                console.log(response);
-//                scope.setData(response) ;
-//            });
-//        }
-//    };
-//    return ListLinks;
-//}]);
-
-
 app.filter('customFilter',function(){
     return function (items, criterion) {
         var tmp = {};
@@ -75,24 +50,24 @@ app.controller('MainCtrl',['$scope', '$filter', '$http' , function($scope, $filt
     $scope.More15 = false;
     $scope.Less15 = false;
     $scope.filteredLink = {};
-    $scope.positions = {start:1,end:15,count:0};
+    $scope.positions = {start:1,end:20,count:0};
 
     $scope.checker = function(type){
         if(type === "showLive"){
-            $scope.positions.count = $scope.filteredLink.live.length;
-            $scope.positions = {start:1,end:15};
-            $scope.filteredLink.live.length>14?$scope.More15 = true:scope.More15 = false;
+            //$scope.positions.count = $scope.filteredLink.live.length;
+            $scope.positions = {start:1,end:20,count:$scope.filteredLink.live.length};
+            $scope.filteredLink.live.length>19?$scope.More15 = true:scope.More15 = false;
+            $scope.Less15 = false;
             $scope.showLive = true;
             $scope.showDead = false;
-            $scope.filteredLink.live.length>14?$scope.More15 = true:'';
         }
         else{
-            $scope.positions.count = $scope.filteredLink.live.length;
-            $scope.positions = {start:1,end:15};
-            $scope.filteredLink.dead.length>14?$scope.More15 = true:scope.More15 = false;
+            //$scope.positions.count = $scope.filteredLink.dead.length;
+            $scope.positions = {start:1,end:20,count:$scope.filteredLink.live.length};
+            $scope.filteredLink.dead.length>19?$scope.More15 = true:$scope.More15 = false;
+            $scope.Less15 = false;
             $scope.showLive = false;
             $scope.showDead = true;
-            $scope.filteredLink.dead.length>14?$scope.More15 = true:'';
         }
     };
 
@@ -121,15 +96,15 @@ app.controller('MainCtrl',['$scope', '$filter', '$http' , function($scope, $filt
 
     $scope.showMore = function(){
         $scope.Less15 = true;
-        $scope.positions.start += 15;
-        $scope.positions.end += 15;
+        $scope.positions.start += 20;
+        $scope.positions.end += 20;
         $scope.positions.end > $scope.positions.count? $scope.More15 = false:'';
     };
 
     $scope.showLess = function(){
         $scope.More15 = true;
-        $scope.positions.start -= 15;
-        $scope.positions.end -= 15;
+        $scope.positions.start -= 20;
+        $scope.positions.end -= 20;
         $scope.positions.start == 1?$scope.Less15 = false:'';
     };
 }]);

@@ -1,6 +1,179 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-
+@import "compass";
 @import "compass/reset";
+
+@include font-face(
+        "Museo Sans Cyrl 100", font-files(
+                "MuseoSansCyrl_100.woff", woff,
+                "MuseoSansCyrl_100.otf", otf,
+                "MuseoSansCyrl_100.ttf", ttf
+));
+@include font-face(
+        "Museo Sans Cyrl 300", font-files(
+                "MuseoSansCyrl_300.woff", woff,
+                "MuseoSansCyrl_300.otf", otf,
+                "MuseoSansCyrl_300.ttf", ttf
+));
+@include font-face(
+        "Museo Sans Cyrl 500", font-files(
+                "MuseoSansCyrl_300.woff", woff,
+                "MuseoSansCyrl_300.otf", otf,
+                "MuseoSansCyrl_300.ttf", ttf
+));
+
+.lodo_smm{
+  padding:3.6vw 7.75vw 2.25vw;
+  width: 12vw;
+}
+.main_wrapper {
+  padding: 0 7.75vw 2vw 7.75vw;
+  height: 60vw;
+  >div{
+    display: inline-block;
+    width: 45%;
+  }
+  .in {
+    float: left;
+    h1 {
+      color: #000;
+      font-family: "Museo Sans Cyrl 500";
+      font-size: 1.9vw;
+      padding-bottom: 2.8vw;
+    }
+    .input_p{
+      color: #000;
+      font-family: "Museo Sans Cyrl 300";
+      font-size: 1.25vw;
+      padding-bottom: 0.6vw;
+    }
+    .input_searchline{
+      padding-bottom: 1.8vw;
+      div{
+        width: 22.3vw;
+        height: 2.2vw;
+        border: 0.1vw solid #38BEA9;
+        -moz-border-radius: 0.4vw;
+        -webkit-border-radius: 0.4vw;
+        border-radius: 0.4vw;
+        color: #CDCDCD;
+        font-family: "Museo Sans Cyrl";
+        font-size: 1.1vw;
+        vertical-align: middle;
+        padding-left: 0.6vw;
+        input{
+          border: none;
+          color: #000;
+          font-family: "Museo Sans Cyrl";
+          font-size: 1.1vw;
+          height: 90%;
+          &:focus { outline: none; }
+        }
+      }
+    }
+    .input_listblock{
+      div{
+        width: 33.2vw;
+        height: 30.5vw;
+        border: 0.1vw solid #38BEA9;
+        -moz-border-radius: 0.4vw;
+        -webkit-border-radius: 0.4vw;
+        border-radius: 0.4vw;
+        vertical-align: top;
+      }
+      textarea{
+        border: none;
+        color: #000;
+        font-family: "Museo Sans Cyrl";
+        font-size: 1.1vw;
+        height: 97%;
+        width: 95%;
+        margin: 0.5vw 0 0 1.2vw;
+        resize: none;
+        &:focus { outline: none; }
+      }
+    }
+    .in_excel{
+      padding: 1.2vw 0 1.7vw;
+      input[type="checkbox"]{
+        width: 0.6vw;
+        height: 1vw;
+      }
+      span{
+        color: #4E4E4E;
+        font-family: "Museo Sans Cyrl 500";
+        font-size: 1.1vw;
+      }
+    }
+    .btn_green{
+      /* Style for "?á???????????Ï ???À???????À" */
+      color: #FFF;
+      font-family: "Museo Sans Cyrl 300";
+      font-size: 1.25vw;
+      width: 17.6vw;
+      height: 3.3vw;
+
+      background-image: -moz-linear-gradient(bottom, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
+      background-image: -o-linear-gradient(bottom, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
+      background-image: -webkit-linear-gradient(bottom, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
+      background-image: linear-gradient(to top, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
+      -moz-border-radius: 0.4vw;
+      -webkit-border-radius: 0.4vw;
+      border-radius: 0.4vw;
+      >div{
+        display: inline-block;
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        width: 13.5vw;
+        text-align: center;
+        padding: 1.1vw 0 0 0.5vw;
+      }
+      .arrow{
+        border-left: 1px solid #FFF;
+        width: 2.5vw;
+      }
+    }
+  }
+
+  .out {
+    margin-right: 1.9%;
+    float: right;
+    .out_headblock{
+      color: #000;
+      font-family: "Museo Sans Cyrl 500";
+      font-size: 1.9vw;
+      padding-bottom: 1.6vw;
+    }
+    .subheader{
+      .subheader_link{
+        display: inline-block;
+        font-family: "Museo Sans Cyrl 100";
+        font-size: 1.4vw;
+        text-decoration: none;
+        color: #000;
+        width: 8.4vw;
+        span{
+          color: #CDCDCD;
+          padding-left: 0.6vw;
+        }
+        .slable{
+          border-bottom: 1px dotted rgba(224, 217, 217, 0.94);
+          cursor: pointer;
+          padding-left: 0;
+        }
+        &.chosen{
+          font-family: "Museo Sans Cyrl 500";
+          .slable{
+            border-bottom: none;
+            cursor: default;
+            color: #000;
+          }
+        }
+      }
+
+    }
+  }
+}
+footer{
+  padding:0 7.75vw;
+  width: 100vw;
+}
