@@ -25,6 +25,48 @@
                 "MinionPro-Regular.otf", otf,
                 "MinionPro-Regular.ttf", ttf
 ));
+*::selection {
+  background: #38bea9 ; /* Safari */
+  color: #FFFFFF;
+}
+*::-moz-selection {
+  background: #38bea9 ; /* Firefox */
+  color: #FFFFFF;
+}
+%button-gr{
+
+    color: #FFF;
+    font-family: "Museo Sans Cyrl 300";
+    font-size: 1.25vw;
+    width: 17.6vw;
+    height: 3.3vw;
+
+    background-image: -moz-linear-gradient(bottom, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
+    background-image: -o-linear-gradient(bottom, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
+    background-image: -webkit-linear-gradient(bottom, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
+    background-image: linear-gradient(to top, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
+    -moz-border-radius: 0.4vw;
+    -webkit-border-radius: 0.4vw;
+    border-radius: 0.4vw;
+    > div {
+      display: inline-block;
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+      width: 13.5vw;
+      text-align: center;
+      padding: 1.1vw 0 0 0.5vw;
+    }
+    .arrow {
+      border-left: 1px solid #FFF;
+      width: 2.5vw !important;
+    }
+}
+
+%soft_decoration{
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
 
 .lodo_smm {
   padding: 3.6vw 7.75vw 2.25vw;
@@ -33,7 +75,7 @@
 
 .main_wrapper {
   padding: 0 7.75vw 2vw 7.75vw;
-  height: 60vw;
+  height: 58vw;
   > div {
     display: inline-block;
     width: 45%;
@@ -115,32 +157,31 @@
       }
     }
     .btn_green {
-      /* Style for "?�???????????� ???�???????�" */
-      color: #FFF;
-      font-family: "Museo Sans Cyrl 300";
-      font-size: 1.25vw;
-      width: 17.6vw;
-      height: 3.3vw;
-
-      background-image: -moz-linear-gradient(bottom, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
-      background-image: -o-linear-gradient(bottom, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
-      background-image: -webkit-linear-gradient(bottom, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
-      background-image: linear-gradient(to top, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
-      -moz-border-radius: 0.4vw;
-      -webkit-border-radius: 0.4vw;
-      border-radius: 0.4vw;
-      > div {
-        display: inline-block;
-        display: inline-block;
-        height: 100%;
-        vertical-align: middle;
-        width: 13.5vw;
-        text-align: center;
-        padding: 1.1vw 0 0 0.5vw;
-      }
-      .arrow {
-        border-left: 1px solid #FFF;
-        width: 2.5vw;
+      position: relative;
+      @extend %button-gr;
+      .btn_list{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        width: 32.8vw;
+        height: 4.4vw;
+        text-align: left;
+        background-image: -moz-linear-gradient(bottom, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
+        background-image: -o-linear-gradient(bottom, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
+        background-image: -webkit-linear-gradient(bottom, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
+        background-image: linear-gradient(to top, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
+        -moz-border-radius: 0.4vw;
+        -webkit-border-radius: 0.4vw;
+        border-radius: 0.4vw;
+        color: #FFF;
+        font-family: "Museo Sans Cyrl 100";
+        font-size: 1.1vw;
+        display: none;
+        p{
+          margin-left: 0.6vw;
+          padding: 0.2vw 0 0.5vw;
+        }
       }
     }
   }
@@ -217,6 +258,7 @@
           width: 33vw;
           height: 1.2vw;
           a {
+            @extend %soft_decoration;
             position: absolute;
             width: 100vw;
             color: #000;
@@ -267,9 +309,86 @@
       left: 25.3vw;
     }
   }
+  .btn_copy{
+    position: relative;
+    @extend %button-gr;
+    margin-left: 7vw;
+    width: 21.5vw;
+    >div{
+      width: 17vw;
+    }
+    .btn_status{
+      position: absolute;
+      z-index: 10;
+      color: #FFF;
+      font-family: "Museo Sans Cyrl";
+      font-size: 1.12vw;
+      width: 23.5vw;
+      height: 8.4vw;
+      top:0;
+      left: 0;
+      background-image: -moz-linear-gradient(bottom, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
+      background-image: -o-linear-gradient(bottom, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
+      background-image: -webkit-linear-gradient(bottom, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
+      background-image: linear-gradient(to top, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
+      -moz-border-radius: 0.4vw;
+      -webkit-border-radius: 0.4vw;
+      border-radius: 0.4vw;
+      text-align: left;
+      display: none;
+      ul{
+        list-style: none;
+        padding: 0.3vw 0 0 1.2vw;
+        li{
+          padding-bottom: 0.7vw;
+          width: 100%;
+          span{
+            float: right;
+            margin-right: 2.1vw;
+            text-align: left;
+            width: 0.5vw;
+            font-size: 0.9vw;
+            margin-top: 0.1vw;
+          }
+        }
+      }
+    }
+
+  }
+
+  .underscription{
+    color: #000;
+    font-family: "Museo Sans Cyrl 300";
+    font-size: 0.9vw;
+    font-size: 0.92vw;
+    margin: 1vw 0 0 7vw;
+    a{
+      color: #000;
+      @extend %soft_decoration;
+    }
+  }
 }
 
 footer {
-  padding: 0 7.75vw;
-  width: 83vw;
+  height: 5vw;
+  padding: 0.5vw 5.75vw 3vw 7.75vw;
+  width: 84.5vw;
+  color: #696969;
+  font-family: "Museo Sans Cyrl 100";
+  font-size: 1.1vw;
+  >div{
+    display: inline-block;
+    a{
+      color: #696969;
+      @extend %soft_decoration;
+      height: 1.5vw;
+    }
+    p{
+      height: 1.6vw;
+    }
+  }
+  .for{
+    float: right;
+    text-align: right;
+  }
 }
