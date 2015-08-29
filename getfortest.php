@@ -33,7 +33,7 @@ $callback = function($document,$url,$code,$target) {
             foreach ($item_head as $key) {
                 $key = trim($key);
                 $key == "nofollow" ? $local_result['nfl'] = 'nf' : '';
-                $key == "noindex" ? $local_result['nix'] = 'ni' : '';
+                $key == "noindex" ? $local_result['nix'] = 'nx' : '';
             }
         };
 
@@ -45,13 +45,37 @@ $callback = function($document,$url,$code,$target) {
                     stripos($a->href, $target) > 12 ? $local_result['rd'] = 'rd' : $local_result['rd'] = '';
                     $a->rel != "nofollow" && !($local_result['nfl']==='nf') ? $local_result['nfl'] = '' : $local_result['nfl'] = 'nf';
                     $hook = true;
+//                    echo '<pre>';
+//                    var_dump($a->parent->href);
+//                    echo '<pre>';
                 }
+
             }
             $hook?$local_result['live'] = true:$local_result['live'] = false;
+
         }
         if (count($data->find('noindex'))){
-            $local_result['nix'] = 'ni';
+            foreach ($data->find('noindex') as $noindex) {
+                $noindex = $noindex->firstChild();
+                var_dump($noindex->getAttribute('href'));
+//                if($noindex->hasAttribute('href')&&stripos($noindex->href, $target)){
+//                    $local_result['nix'] = 'nx';
+//                }
+            }
         }
+//        if (count($data->find('noindex a'))) {
+//            foreach ($data->find('noindex a') as $noindex) {
+////
+////                if (stripos($noindex->href, $target)) {
+////                    stripos($noindex->href, $target) > 12 ? $local_result['rd'] = 'rd' : $local_result['rd'] = '';
+////                    $a->rel != "nofollow" && !($local_result['nfl']==='nf') ? $local_result['nfl'] = '' : $local_result['nfl'] = 'nf';
+////                    $hook = true;
+////                }
+////            }
+////            $hook?$local_result['live'] = true:$local_result['live'] = false;
+//                var_dump($noindex);
+//            }
+//        }
         $data->clear();
         unset($data, $head);
     }
@@ -61,8 +85,13 @@ $callback = function($document,$url,$code,$target) {
     return $local_result;
 };
 
+$params = array("
+http://womenbox.net/showthread.php?p=105182#post105182");
+
+$target = "allmoscowoffices.ru";
+
 $multi = new dHttp\Client();
-foreach ($params->links as $url) {
+foreach ($params as $url) {
     $url = trim($url);
     $resp_once[] = new dHttp\Client($url, array(
         CURLOPT_SSL_VERIFYPEER => FALSE,
@@ -78,9 +107,9 @@ foreach ($params->links as $url) {
 $response_array = $multi->multi($resp_once);
 
 foreach($response_array as $item) {
-    $result[] = $callback($item->getRaw(),$item->getUrl(),$item->getCode(),$params->target);
+    $result[] = $callback($item->getRaw(),$item->getUrl(),$item->getCode(),$target);
 
 }
-echo json_encode($result);
+//echo json_encode($result);
 
 //echo '<strong>Время выполнения скрипта: ' . (microtime(true) - $start) . ' сек.</strong>';

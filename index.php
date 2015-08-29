@@ -42,12 +42,12 @@
         </span>
         </div>
         <div class="btn_green">
-            <div ng-click="parsedServe()">Сложная проверка</div>
+            <div><span ng-click="parsedServe()" class="clicker">Сложная проверка</span></div>
             <div class="arrow"></div>
             <div class="btn_list">
-                <p>Простая проверка (проверяем посты на наличие)</p>
+                <p class="clicker">Простая проверка (проверяем посты на наличие)</p>
 
-                <p>Сложная проверка (+ проверим nofollow, noindex и redirect)</p>
+                <p class="clicker">Сложная проверка (+ проверим nofollow, noindex и redirect)</p>
             </div>
         </div>
     </div>
@@ -121,7 +121,7 @@
         <a href="javascript:none;" ng-click="showMore()" ng-show="More15" id="next">следующие 20 <span>→</span></a>
     </div>
     <div class="btn_copy">
-        <div clip-copy="joiner(filteredLink.live)">Скопировать все живые</div>
+        <div><span clip-copy="joiner(filteredLink.live)" class="clicker">Скопировать все живые</span></div>
         <div class="arrow">
 <!--            <svg width="53" height="53" class="moveDown">-->
 <!--                <line stroke="#000" x1="40" y1="20" x2="26" y2="34" stroke-width="1.5"></line>-->
@@ -130,16 +130,16 @@
         </div>
         <div class="btn_status">
             <ul>
-                <li class="copies" clip-copy="joiner(filteredLink.clean)">Скопировать все чистые ссылки
+                <li class="copies clicker" clip-copy="joiner(filteredLink.clean)">Скопировать все чистые ссылки
                     <span>{{filteredLink.live.clean}}</span>
                 </li>
-                <li class="copies" clip-copy="joiner(filteredLink.nofollow)">Скопировать все ссылки с redirect
+                <li class="copies clicker" clip-copy="joiner(filteredLink.nofollow)">Скопировать все ссылки с redirect
                     <span>{{filteredLink.nofollow.length}}</span>
                 </li>
-                <li class="copies" clip-copy="joiner(filteredLink.noindex)">Скопировать все ссылки с noindex
+                <li class="copies clicker" clip-copy="joiner(filteredLink.noindex)">Скопировать все ссылки с noindex
                     <span>{{filteredLink.noindex.length}}</span>
                 </li>
-                <li class="copies" clip-copy="joiner(filteredLink.redirect)">Скопировать все ссылки с nofollow
+                <li class="copies clicker" clip-copy="joiner(filteredLink.redirect)">Скопировать все ссылки с nofollow
                     <span>{{filteredLink.redirect.length}}</span>
                 </li>
             </ul>
