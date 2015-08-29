@@ -137,14 +137,14 @@
         border: 0.1vw solid #38BEA9;
         @extend %var_border_rad;
         color: #CDCDCD;
-        font-family: "Museo Sans Cyrl";
+        font-family: "Museo Sans Cyrl 100";
         font-size: 1.1vw;
         vertical-align: middle;
         padding-left: 0.6vw;
         input {
           border: none;
           color: #000;
-          font-family: "Museo Sans Cyrl";
+          font-family: "Museo Sans Cyrl 100";
           font-size: 1.1vw;
           height: 90%;
           &:focus {
@@ -164,7 +164,7 @@
       textarea {
         border: none;
         color: #000;
-        font-family: "Museo Sans Cyrl";
+        font-family: "Museo Sans Cyrl 100";
         font-size: 1.1vw;
         height: 97%;
         width: 95%;

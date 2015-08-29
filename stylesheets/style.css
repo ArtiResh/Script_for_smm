@@ -202,7 +202,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: 2.2vw;
   border: 0.1vw solid #38BEA9;
   color: #CDCDCD;
-  font-family: "Museo Sans Cyrl";
+  font-family: "Museo Sans Cyrl 100";
   font-size: 1.1vw;
   vertical-align: middle;
   padding-left: 0.6vw;
@@ -211,7 +211,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .main_wrapper .in .input_searchline div input {
   border: none;
   color: #000;
-  font-family: "Museo Sans Cyrl";
+  font-family: "Museo Sans Cyrl 100";
   font-size: 1.1vw;
   height: 90%;
 }
@@ -230,7 +230,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .main_wrapper .in .input_listblock textarea {
   border: none;
   color: #000;
-  font-family: "Museo Sans Cyrl";
+  font-family: "Museo Sans Cyrl 100";
   font-size: 1.1vw;
   height: 97%;
   width: 95%;

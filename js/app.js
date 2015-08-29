@@ -54,6 +54,9 @@ app.controller('MainCtrl',['$scope', '$filter', '$http' , function($scope, $filt
         }
     };
 
+    $scope.$watch('target_link', function() {
+        $scope.target_link = $scope.target_link.trim();
+    });
 
     $scope.filterLinks = function(flinks){
         $scope.loading = false;
