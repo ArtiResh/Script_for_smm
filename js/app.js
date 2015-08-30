@@ -107,9 +107,6 @@ app.controller('MainCtrl', ['$scope', '$filter', '$http', function ($scope, $fil
         $scope.filteredLink.redirect = $filter('filter')(flinks, {rd: 'rd'});
 
         var gramma = String($scope.filteredLink.live.length+$scope.filteredLink.dead.length);
-        console.log(gramma+ "  "+typeof(gramma));
-        console.log(gramma.substr(gramma.length-1,1));
-        console.log(gramma.substr(gramma.length-1,2));
         (gramma!='11'&&gramma.substr(gramma.length-1,1)=="1")? $scope.grammaticFormHeader='поста':$scope.grammaticFormHeader='постов';
         $scope.excel($scope.ExcelLoad);
 
@@ -118,7 +115,6 @@ app.controller('MainCtrl', ['$scope', '$filter', '$http', function ($scope, $fil
     $scope.parsedServe = function (type) {
         if ($scope.canStart) {
             var links = $scope.list_links.split(/\n/);
-            console.log(typeof(links));
             type === "Soft" ? $scope.sofisticatedCheck = false : $scope.sofisticatedCheck = true;
             $scope.loading = true;
             $scope.filteredLink = {};
@@ -136,11 +132,8 @@ app.controller('MainCtrl', ['$scope', '$filter', '$http', function ($scope, $fil
     $scope.joiner = function (st_arr) {
         var result = '';
         for (var i = 0; i < st_arr.length; i++) {
-            console.log(typeof(st_arr[i].url));
             result = result + (st_arr[i].url + "\n");
         }
-        ;
-        console.log(result);
         return result;
     };
 
