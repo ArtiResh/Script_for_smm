@@ -349,6 +349,9 @@
           overflow-x: hidden;
           width: 33vw;
           height: 1.2vw;
+          div{
+            overflow: hidden;
+          }
           a {
             text-decoration: none;
             position: absolute;
@@ -358,6 +361,7 @@
             font-size: 1.1vw;
             p{
               @extend %soft_decoration;
+              position: absolute;
             }
           }
         }

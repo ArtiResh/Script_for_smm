@@ -97,7 +97,9 @@
                 <div class="number" ng-bind="$index+positions.start">
                 </div>
                 <div class="link">
-                    <a href={{link.url}} target="_blank"><p>{{link.url}}</p></a>
+                    <div>
+                        <a href={{link.url}} target="_blank"><p>{{link.url}}</p></a>
+                    </div>
                 </div>
                 <div class="shadow"></div>
                 <div ng-show="sofisticatedCheck" class="add_info">
@@ -112,7 +114,9 @@
                 <div class="number" ng-bind="$index+positions.start">
                 </div>
                 <div class="link">
-                    <a href={{link.url}} target="_blank">{{link.url}}</a>
+                    <div>
+                        <a href={{link.url}} target="_blank"><p>{{link.url}}</p></a>
+                    </div>
                 </div>
                 <div class="shadow"></div>
                 <div ng-show="sofisticatedCheck" class="add_info">
