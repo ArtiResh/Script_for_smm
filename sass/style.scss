@@ -1,5 +1,7 @@
+@charset "UTF-8";
 @import "compass";
 @import "compass/reset";
+
 
 @include font-face(
         "Museo Sans Cyrl 100", font-files(
@@ -370,12 +372,38 @@
           margin-left: 0.4vw;
           height: 1vw;
          span{
+           position: relative;
            color: #38BEA9;
            font-family: "Museo Sans Cyrl 100";
            font-size: 0.9vw;
            text-transform: uppercase;
            padding-right: 0.3vw;
-         }
+           cursor: pointer;
+            &:after{
+              display: block;
+              text-align: center;
+              opacity: 0;
+              text-transform: none;
+              font-size: 0.7vw;
+              width: 8.5vw;
+              height: 1.5vw;
+              position: absolute;
+              top: 1vw;
+              left: 1vw;
+            }
+            &:hover:after{
+              opacity: 1;
+            }
+          }
+          .rd:after{
+            content:"Ссылка с редиректом";
+          }
+          .nix:after{
+            content:"Ссылка с аттрибутом noindex";
+          }
+          .nfl:after{
+            content:"Ссылка с аттрибутом nofollow";
+          }
         }
       }
     }

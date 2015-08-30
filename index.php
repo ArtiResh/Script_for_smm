@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en" ng-app="app">
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
@@ -100,9 +101,9 @@
                 </div>
                 <div class="shadow"></div>
                 <div ng-show="sofisticatedCheck" class="add_info">
-                    <span ng-if=link.rd>{{link.rd}}</span>
-                    <span ng-if=link.nix>{{link.nix}}</span>
-                    <span ng-if=link.nfl>{{link.nfl}}</span>
+                    <span ng-if=link.rd class="rd">{{link.rd}}</span>
+                    <span ng-if=link.nix class="nix">{{link.nix}}</span>
+                    <span ng-if=link.nfl class="nfl">{{link.nfl}}</span>
                 </div>
             </div>
 
@@ -115,9 +116,9 @@
                 </div>
                 <div class="shadow"></div>
                 <div ng-show="sofisticatedCheck" class="add_info">
-                    <span ng-if=link.rd>{{link.rd}}</span>
-                    <span ng-if=link.nix>{{link.nix}}</span>
-                    <span ng-if=link.nfl>{{link.nfl}}</span>
+                    <span ng-if=link.rdcl class="rd">{{link.rd}}</span>
+                    <span ng-if=link.nix class="nix">{{link.nix}}</span>
+                    <span ng-if=link.nfl class="nfl">{{link.nfl}}</span>
                 </div>
             </div>
         </div>
