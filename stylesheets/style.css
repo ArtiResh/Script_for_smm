@@ -79,36 +79,52 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-family: "Minion Pro Regular";
   src: url('../fonts/MinionPro-Regular.woff?1440793049') format('woff'), url('../fonts/MinionPro-Regular.otf?1440793049') format('opentype'), url('../fonts/MinionPro-Regular.ttf?1440793049') format('truetype');
 }
-/* line 28, ../sass/style.scss */
+@keyframes slideInDown {
+  from {
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+/* line 41, ../sass/style.scss */
 *::selection {
   background: #38bea9;
   /* Safari */
   color: #FFFFFF;
 }
 
-/* line 32, ../sass/style.scss */
+/* line 45, ../sass/style.scss */
 *::-moz-selection {
   background: #38bea9;
   /* Firefox */
   color: #FFFFFF;
 }
 
-/* line 36, ../sass/style.scss */
+/* line 50, ../sass/style.scss */
+.main_wrapper .in .active.btn_green, .main_wrapper .active.btn_copy, .main_wrapper .in .btn_green .active.btn_list, .main_wrapper .btn_copy .active.btn_status {
+  background-image: -moz-linear-gradient(bottom, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
+  background-image: -o-linear-gradient(bottom, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
+  background-image: -webkit-linear-gradient(bottom, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
+  background-image: linear-gradient(to top, #01b99f 0%, #02caae 100%, #02d5b7 100%, #01b99f 100%);
+}
+
+/* line 57, ../sass/style.scss */
 .main_wrapper .in .btn_green, .main_wrapper .btn_copy {
   color: #FFF;
   font-family: "Museo Sans Cyrl 300";
   font-size: 1.25vw;
   width: 17.6vw;
   height: 3.3vw;
-  background-image: -moz-linear-gradient(bottom, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
-  background-image: -o-linear-gradient(bottom, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
-  background-image: -webkit-linear-gradient(bottom, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
-  background-image: linear-gradient(to top, #01b99f 0%, #02caae 100%, #02d5b7 100%, #01b99f 100%);
+  background: #31AC99;
   -moz-border-radius: 0.4vw;
   -webkit-border-radius: 0.4vw;
   border-radius: 0.4vw;
 }
-/* line 51, ../sass/style.scss */
+/* line 68, ../sass/style.scss */
 .main_wrapper .in .btn_green > div, .main_wrapper .btn_copy > div {
   display: inline-block;
   display: inline-block;
@@ -118,20 +134,27 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   text-align: center;
   padding: 1.1vw 0 0 0.5vw;
 }
-/* line 60, ../sass/style.scss */
+/* line 77, ../sass/style.scss */
 .main_wrapper .in .btn_green .arrow, .main_wrapper .btn_copy .arrow {
-  border-left: 1px solid #FFF;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  z-index: 8;
   width: 2.5vw !important;
 }
+/* line 82, ../sass/style.scss */
+.main_wrapper .in .btn_green .arrow svg, .main_wrapper .btn_copy .arrow svg {
+  width: 1.2vw;
+  height: 1.2vw;
+}
 
-/* line 73, ../sass/style.scss */
+/* line 97, ../sass/style.scss */
 .main_wrapper .in .btn_green:after, .main_wrapper .in .btn_green .btn_list:after, .main_wrapper .btn_copy:after, .main_wrapper .btn_copy .btn_status:after, .main_wrapper .in .input_searchline div, .main_wrapper .in .input_listblock div, .main_wrapper .in .btn_green .btn_list, .main_wrapper .btn_copy .btn_status {
   -moz-border-radius: 0.4vw;
   -webkit-border-radius: 0.4vw;
   border-radius: 0.4vw;
 }
 
-/* line 80, ../sass/style.scss */
+/* line 104, ../sass/style.scss */
 .main_wrapper .in .btn_green:after, .main_wrapper .in .btn_green .btn_list:after, .main_wrapper .btn_copy:after, .main_wrapper .btn_copy .btn_status:after {
   position: absolute;
   content: '';
@@ -145,58 +168,67 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   z-index: 2;
   opacity: 0;
 }
-/* line 94, ../sass/style.scss */
-.main_wrapper .in .btn_green:hover:after, .main_wrapper .in .btn_green .btn_list:hover:after, .main_wrapper .btn_copy:hover:after, .main_wrapper .btn_copy .btn_status:hover:after {
+/* line 118, ../sass/style.scss */
+.main_wrapper .in .active.btn_green:hover:after, .main_wrapper .in .btn_green .active.btn_list:hover:after, .main_wrapper .active.btn_copy:hover:after, .main_wrapper .btn_copy .active.btn_status:hover:after {
   opacity: 1;
   -webkit-transition: opacity 0.4s linear;
   transition: opacity 0.4s linear;
 }
 
-/* line 101, ../sass/style.scss */
-.main_wrapper .out .resultblock .el_list_link .link a, .main_wrapper .underscription a, footer > div a {
+/* line 125, ../sass/style.scss */
+.main_wrapper .out .out_headblock a, .main_wrapper .out .resultblock .el_list_link .link a p, .main_wrapper .underscription a, footer > div a {
   text-decoration: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-/* line 106, ../sass/style.scss */
+/* line 131, ../sass/style.scss */
+.main_wrapper .in .btn_green .slideInDown.btn_list, .main_wrapper .btn_copy .slideInDown.btn_status {
+  display: block;
+  animation-name: slideInDown;
+  -webkit-transition: all 2s;
+  /* Safari */
+  transition: all 2s;
+}
+
+/* line 139, ../sass/style.scss */
 .lodo_smm {
   padding: 3.6vw 7.75vw 2.25vw;
   width: 12vw;
 }
 
-/* line 111, ../sass/style.scss */
+/* line 146, ../sass/style.scss */
 .main_wrapper {
   padding: 0 7.75vw 2vw 7.75vw;
   height: 58vw;
 }
-/* line 114, ../sass/style.scss */
+/* line 149, ../sass/style.scss */
 .main_wrapper > div {
   display: inline-block;
   width: 45%;
 }
-/* line 118, ../sass/style.scss */
+/* line 153, ../sass/style.scss */
 .main_wrapper .in {
   float: left;
 }
-/* line 120, ../sass/style.scss */
+/* line 155, ../sass/style.scss */
 .main_wrapper .in h1 {
   color: #000;
   font-family: "Museo Sans Cyrl 500";
   font-size: 1.9vw;
   padding-bottom: 2.8vw;
 }
-/* line 126, ../sass/style.scss */
+/* line 161, ../sass/style.scss */
 .main_wrapper .in .input_p {
   color: #000;
   font-family: "Museo Sans Cyrl 300";
   font-size: 1.25vw;
   padding-bottom: 0.7vw;
 }
-/* line 132, ../sass/style.scss */
+/* line 167, ../sass/style.scss */
 .main_wrapper .in .input_searchline {
   padding-bottom: 1.8vw;
 }
-/* line 134, ../sass/style.scss */
+/* line 169, ../sass/style.scss */
 .main_wrapper .in .input_searchline div {
   width: 22.3vw;
   height: 2.2vw;
@@ -207,95 +239,120 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   vertical-align: middle;
   padding-left: 0.6vw;
 }
-/* line 144, ../sass/style.scss */
+/* line 179, ../sass/style.scss */
 .main_wrapper .in .input_searchline div input {
   border: none;
   color: #000;
   font-family: "Museo Sans Cyrl 100";
   font-size: 1.1vw;
-  height: 90%;
+  height: 2vw;
 }
-/* line 150, ../sass/style.scss */
+/* line 185, ../sass/style.scss */
 .main_wrapper .in .input_searchline div input:focus {
   outline: none;
 }
-/* line 157, ../sass/style.scss */
+/* line 192, ../sass/style.scss */
 .main_wrapper .in .input_listblock div {
   width: 33.2vw;
   height: 30.5vw;
   border: 0.1vw solid #38BEA9;
   vertical-align: top;
 }
-/* line 164, ../sass/style.scss */
+/* line 199, ../sass/style.scss */
 .main_wrapper .in .input_listblock textarea {
   border: none;
   color: #000;
   font-family: "Museo Sans Cyrl 100";
   font-size: 1.1vw;
-  height: 97%;
-  width: 95%;
+  height: 29.5vw;
+  width: 30.5vw;
   margin: 0.5vw 0 0 1.2vw;
   resize: none;
 }
-/* line 173, ../sass/style.scss */
+/* line 208, ../sass/style.scss */
 .main_wrapper .in .input_listblock textarea:focus {
   outline: none;
 }
-/* line 178, ../sass/style.scss */
+/* line 213, ../sass/style.scss */
 .main_wrapper .in .in_excel {
   padding: 1.2vw 0 1.7vw;
+  position: relative;
 }
-/* line 180, ../sass/style.scss */
+/* line 216, ../sass/style.scss */
 .main_wrapper .in .in_excel input[type="checkbox"] {
-  width: 0.6vw;
-  height: 1vw;
+  display: none;
 }
-/* line 184, ../sass/style.scss */
+/* line 219, ../sass/style.scss */
+.main_wrapper .in .in_excel input[type="checkbox"] + label {
+  cursor: pointer;
+  padding-left: 0;
+}
+/* line 223, ../sass/style.scss */
+.main_wrapper .in .in_excel input[type="checkbox"] + label::before {
+  content: "";
+  display: inline-block;
+  height: 1.25vw;
+  width: 1.2vw;
+  background: url("../checkboxes.png");
+  background-size: 1.2vw 2.5vw;
+}
+/* line 231, ../sass/style.scss */
+.main_wrapper .in .in_excel input[type="checkbox"]:checked + label::before {
+  background-position: 0 -1.3vw;
+}
+/* line 234, ../sass/style.scss */
 .main_wrapper .in .in_excel span {
   color: #4E4E4E;
   font-family: "Museo Sans Cyrl 500";
   font-size: 1.1vw;
+  position: relative;
+  top: -0.2vw;
 }
-/* line 190, ../sass/style.scss */
+/* line 242, ../sass/style.scss */
 .main_wrapper .in .btn_green {
   position: relative;
+  cursor: pointer;
 }
-/* line 194, ../sass/style.scss */
+/* line 247, ../sass/style.scss */
 .main_wrapper .in .btn_green .btn_list {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 5;
+  z-index: 10;
   width: 32.8vw;
   height: 4.4vw;
   text-align: left;
-  background-image: -moz-linear-gradient(bottom, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
-  background-image: -o-linear-gradient(bottom, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
-  background-image: -webkit-linear-gradient(bottom, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
-  background-image: linear-gradient(to top, #01b99f 0%, #02caae 100%, #02d5b7 100%, #01b99f 100%);
+  background: #31AC99;
   color: #FFF;
   font-family: "Museo Sans Cyrl 100";
-  font-size: 1.1vw;
   display: none;
+  font-size: 1.12vw;
 }
-/* line 212, ../sass/style.scss */
+/* line 264, ../sass/style.scss */
 .main_wrapper .in .btn_green .btn_list p {
   margin-left: 0.6vw;
   padding: 0.2vw 0 0.5vw;
+  cursor: pointer;
 }
-/* line 220, ../sass/style.scss */
+/* line 273, ../sass/style.scss */
 .main_wrapper .out {
   margin-right: 1.7vw;
   float: right;
 }
-/* line 223, ../sass/style.scss */
+/* line 276, ../sass/style.scss */
 .main_wrapper .out .out_headblock {
   color: #000;
   font-family: "Museo Sans Cyrl 500";
   font-size: 1.9vw;
   padding-bottom: 1.6vw;
+  height: 3.8vw;
 }
-/* line 230, ../sass/style.scss */
+/* line 282, ../sass/style.scss */
+.main_wrapper .out .out_headblock a {
+  color: #000;
+  text-decoration: none;
+}
+/* line 289, ../sass/style.scss */
 .main_wrapper .out .subheader .subheader_link {
   display: inline-block;
   font-family: "Museo Sans Cyrl 100";
@@ -304,39 +361,39 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   color: #000;
   width: 8.4vw;
 }
-/* line 237, ../sass/style.scss */
+/* line 296, ../sass/style.scss */
 .main_wrapper .out .subheader .subheader_link span {
   color: #CDCDCD;
   padding-left: 0.6vw;
 }
-/* line 241, ../sass/style.scss */
+/* line 300, ../sass/style.scss */
 .main_wrapper .out .subheader .subheader_link .slable {
   border-bottom: 1px dotted rgba(224, 217, 217, 0.94);
   cursor: pointer;
   padding-left: 0;
 }
-/* line 246, ../sass/style.scss */
+/* line 305, ../sass/style.scss */
 .main_wrapper .out .subheader .subheader_link.chosen {
   font-family: "Museo Sans Cyrl 500";
 }
-/* line 248, ../sass/style.scss */
+/* line 307, ../sass/style.scss */
 .main_wrapper .out .subheader .subheader_link.chosen .slable {
   border-bottom: none;
   cursor: default;
   color: #000;
 }
-/* line 255, ../sass/style.scss */
+/* line 314, ../sass/style.scss */
 .main_wrapper .out .subheader .del {
   width: 10vw;
 }
-/* line 259, ../sass/style.scss */
+/* line 318, ../sass/style.scss */
 .main_wrapper .out .resultblock {
   margin: 1.2vw 0 0 -2vw;
   width: 42.5vw;
   height: 36vw;
   position: relative;
 }
-/* line 264, ../sass/style.scss */
+/* line 323, ../sass/style.scss */
 .main_wrapper .out .resultblock .loader {
   width: 6vw;
   height: 6vw;
@@ -345,16 +402,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   top: 10vw;
   left: 13vw;
 }
-/* line 272, ../sass/style.scss */
+/* line 331, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link {
   margin-top: 0.6vw;
 }
-/* line 274, ../sass/style.scss */
+/* line 333, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link > div {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 278, ../sass/style.scss */
+/* line 337, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .number {
   color: #CDCDCD;
   font-family: "Museo Sans Cyrl 100";
@@ -363,22 +420,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   text-align: center;
   margin-left: -1vw;
 }
-/* line 286, ../sass/style.scss */
+/* line 345, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .link {
   position: relative;
   overflow-x: hidden;
   width: 33vw;
   height: 1.2vw;
 }
-/* line 291, ../sass/style.scss */
+/* line 350, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .link a {
+  text-decoration: none;
   position: absolute;
   width: 100vw;
   color: #000;
   font-family: "Museo Sans Cyrl 300";
   font-size: 1.1vw;
 }
-/* line 300, ../sass/style.scss */
+/* line 362, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .shadow {
   position: relative;
   margin-left: 0.3vw;
@@ -386,12 +444,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: 1.2vw;
   box-shadow: -1.3vw 0 1.2vw 0.3vw #fff;
 }
-/* line 307, ../sass/style.scss */
+/* line 369, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .add_info {
   margin-left: 0.4vw;
   height: 1vw;
 }
-/* line 310, ../sass/style.scss */
+/* line 372, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .add_info span {
   color: #38BEA9;
   font-family: "Museo Sans Cyrl 100";
@@ -399,7 +457,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   text-transform: uppercase;
   padding-right: 0.3vw;
 }
-/* line 321, ../sass/style.scss */
+/* line 383, ../sass/style.scss */
 .main_wrapper .next_prev {
   position: relative;
   width: 37vw;
@@ -407,7 +465,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin-left: 6.5vw;
   height: 3vw;
 }
-/* line 327, ../sass/style.scss */
+/* line 389, ../sass/style.scss */
 .main_wrapper .next_prev a {
   position: absolute;
   color: #000;
@@ -417,25 +475,26 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-family: "Museo Sans Cyrl 300";
   border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
 }
-/* line 335, ../sass/style.scss */
+/* line 397, ../sass/style.scss */
 .main_wrapper .next_prev a span {
   font-family: "Minion Pro Regular";
 }
-/* line 339, ../sass/style.scss */
+/* line 401, ../sass/style.scss */
 .main_wrapper .next_prev #next {
   left: 25.3vw;
 }
-/* line 343, ../sass/style.scss */
+/* line 405, ../sass/style.scss */
 .main_wrapper .btn_copy {
   position: relative;
   margin-left: 7vw;
   width: 21.5vw;
+  cursor: pointer;
 }
-/* line 349, ../sass/style.scss */
+/* line 412, ../sass/style.scss */
 .main_wrapper .btn_copy > div {
   width: 17vw;
 }
-/* line 352, ../sass/style.scss */
+/* line 415, ../sass/style.scss */
 .main_wrapper .btn_copy .btn_status {
   position: absolute;
   z-index: 10;
@@ -446,24 +505,22 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: 8.4vw;
   top: 0;
   left: 0;
-  background-image: -moz-linear-gradient(bottom, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
-  background-image: -o-linear-gradient(bottom, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
-  background-image: -webkit-linear-gradient(bottom, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
-  background-image: linear-gradient(to top, #01b99f 0%, #02caae 100%, #02d5b7 100%, #01b99f 100%);
+  background: #31AC99;
   text-align: left;
   display: none;
 }
-/* line 369, ../sass/style.scss */
+/* line 430, ../sass/style.scss */
 .main_wrapper .btn_copy .btn_status ul {
   list-style: none;
   padding: 0.3vw 0 0 1.2vw;
 }
-/* line 372, ../sass/style.scss */
+/* line 433, ../sass/style.scss */
 .main_wrapper .btn_copy .btn_status ul li {
   padding-bottom: 0.7vw;
   width: 100%;
+  cursor: pointer;
 }
-/* line 375, ../sass/style.scss */
+/* line 437, ../sass/style.scss */
 .main_wrapper .btn_copy .btn_status ul li span {
   float: right;
   margin-right: 2.1vw;
@@ -472,7 +529,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-size: 0.9vw;
   margin-top: 0.1vw;
 }
-/* line 390, ../sass/style.scss */
+/* line 453, ../sass/style.scss */
 .main_wrapper .underscription {
   color: #000;
   font-family: "Museo Sans Cyrl 300";
@@ -480,12 +537,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-size: 0.92vw;
   margin: 1vw 0 0 7vw;
 }
-/* line 396, ../sass/style.scss */
+/* line 459, ../sass/style.scss */
 .main_wrapper .underscription a {
   color: #000;
 }
 
-/* line 403, ../sass/style.scss */
+/* line 466, ../sass/style.scss */
 footer {
   height: 5vw;
   padding: 0.5vw 5.75vw 3vw 7.75vw;
@@ -494,27 +551,51 @@ footer {
   font-family: "Museo Sans Cyrl 100";
   font-size: 1.1vw;
 }
-/* line 410, ../sass/style.scss */
+/* line 473, ../sass/style.scss */
 footer > div {
   display: inline-block;
 }
-/* line 412, ../sass/style.scss */
+/* line 475, ../sass/style.scss */
 footer > div a {
   color: #696969;
   height: 1.5vw;
 }
-/* line 417, ../sass/style.scss */
+/* line 480, ../sass/style.scss */
 footer > div p {
   height: 1.6vw;
 }
-/* line 421, ../sass/style.scss */
+/* line 484, ../sass/style.scss */
 footer .for {
   float: right;
   text-align: right;
 }
 
-/* line 426, ../sass/style.scss */
+/* line 489, ../sass/style.scss */
 .clicker {
   position: relative;
   z-index: 8;
+}
+
+/* line 494, ../sass/style.scss */
+.animate-enter,
+.animate-leave {
+  -webkit-transition: 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;
+  -moz-transition: 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;
+  -ms-transition: 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;
+  -o-transition: 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;
+  transition: 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;
+  position: relative;
+  display: block;
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
 }

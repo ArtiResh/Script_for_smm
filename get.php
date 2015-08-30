@@ -1,8 +1,8 @@
 <?
-require_once 'simple_html_dom.php';
-include_once('dHttp/Client.php');
-include_once('dHttp/Url.php');
-include_once('dHttp/Response.php');
+require_once 'sources/simple_html_dom.php';
+include_once('sources/dHttp/Client.php');
+include_once('sources/dHttp/Url.php');
+include_once('sources/dHttp/Response.php');
 
 $params = json_decode(file_get_contents('php://input'));
 
@@ -50,7 +50,10 @@ $callback = function($document,$url,$code,$target) {
             $hook?$local_result['live'] = true:$local_result['live'] = false;
         }
         if (count($data->find('noindex'))){
-            $local_result['nix'] = 'ni';
+            foreach ($data->find('noindex') as $noindex) {
+                if (stripos($noindex->innertext, $target))$local_result['nix'] = 'ni';
+            }
+
         }
         $data->clear();
         unset($data, $head);
