@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="app">
+<html lang="en"  ng-app="app">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta charset="UTF-8">
@@ -61,7 +61,7 @@
     </div>
     <div class="out">
         <div class="out_headblock">
-            <p>Результаты проверки <span ng-show="showResult">{{filteredLink.live.length+filteredLink.dead.length}} постов</p>
+            <p>Результаты проверки <span ng-show="showResult">{{filteredLink.live.length+filteredLink.dead.length}} {{grammaticFormHeader}}</p>
 
             <p ng-show="showResult">для <a href="{{'http://'+ target_link}}" target="_blank">{{target_link}}</a></p>
         </div>
@@ -179,7 +179,7 @@
 <script src="js/angular-animate.min.js"></script>
 <script src="js/ZeroClipboard.min.js"></script>
 <script src="js/ng-clip.min.js"></script>
-<script src="js/app.js"></script>
+<script src="js/app.js" charset="utf-8"></script>
 
 </body>
 </html>

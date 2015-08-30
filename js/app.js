@@ -17,6 +17,11 @@ app.config(['ngClipProvider', function (ngClipProvider) {
     ngClipProvider.setPath("js/ZeroClipboard.swf");
 }]);
 
+app.config(['$httpProvider', function($httpProvider) {
+    $httpProvider.defaults.headers.common['Content-Type'] = 'application/json; charset=utf-8';
+    $httpProvider.defaults.headers.common['Accept'] = 'application/json; charset=utf-8';
+}]);
+
 app.controller('MainCtrl', ['$scope', '$filter', '$http', function ($scope, $filter, $http) {
     $scope.showLive = true;
     $scope.showDead = false;
@@ -25,7 +30,7 @@ app.controller('MainCtrl', ['$scope', '$filter', '$http', function ($scope, $fil
     $scope.sofisticatedCheck = true;
     $scope.showChoise = false;
     $scope.canStart = false;
-    //$scope.grammaticFormHeader = 'постов';
+    $scope.grammaticFormHeader = "РїРѕСЃС‚РѕРІ";
     $scope.links = NaN;
     $scope.More15 = false;
     $scope.Less15 = false;
@@ -101,15 +106,11 @@ app.controller('MainCtrl', ['$scope', '$filter', '$http', function ($scope, $fil
         $scope.filteredLink.noindex = $filter('filter')(flinks, {nix: 'ni'});
         $scope.filteredLink.redirect = $filter('filter')(flinks, {rd: 'rd'});
 
-
-        console.log($scope.filteredLink.live);
-        console.log($scope.filteredLink.dead);
-        console.log($scope.filteredLink.clean);
-        console.log($scope.filteredLink.nofollow);
-        console.log($scope.filteredLink.noindex);
-        console.log($scope.filteredLink.redirect);
-        //var gramma = String($scope.filteredLink.live.length+$scope.filteredLink.dead.length);
-        //gramma.substr(id.length-1,1)=="1"&&gramma.substr(id.length-1,2)!="11"? $scope.grammaticFormHeader='поста':$scope.grammaticFormHeader='поста';
+        var gramma = String($scope.filteredLink.live.length+$scope.filteredLink.dead.length);
+        console.log(gramma+ "  "+typeof(gramma));
+        console.log(gramma.substr(gramma.length-1,1));
+        console.log(gramma.substr(gramma.length-1,2));
+        (gramma!='11'&&gramma.substr(gramma.length-1,1)=="1")? $scope.grammaticFormHeader='РїРѕСЃС‚Р°':$scope.grammaticFormHeader='РїРѕСЃС‚РѕРІ';
         $scope.excel($scope.ExcelLoad);
 
     };
