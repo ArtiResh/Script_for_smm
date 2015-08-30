@@ -100,9 +100,9 @@
                 </div>
                 <div class="shadow"></div>
                 <div ng-show="sofisticatedCheck" class="add_info">
-                    <span ng-if=link.nfl>{{link.nfl}}</span>
-                    <span ng-if=link.nix>{{link.nix}}</span>
                     <span ng-if=link.rd>{{link.rd}}</span>
+                    <span ng-if=link.nix>{{link.nix}}</span>
+                    <span ng-if=link.nfl>{{link.nfl}}</span>
                 </div>
             </div>
 
@@ -115,9 +115,9 @@
                 </div>
                 <div class="shadow"></div>
                 <div ng-show="sofisticatedCheck" class="add_info">
-                    <span ng-if=link.nfl>{{link.nfl}}</span>
-                    <span ng-if=link.nix>{{link.nix}}</span>
                     <span ng-if=link.rd>{{link.rd}}</span>
+                    <span ng-if=link.nix>{{link.nix}}</span>
+                    <span ng-if=link.nfl>{{link.nfl}}</span>
                 </div>
             </div>
         </div>
