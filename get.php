@@ -16,6 +16,7 @@ $callback = function($document,$url,$code,$target) {
     $local_result['nfl'] = '';
     $local_result['nix'] = '';
     $local_result['rd'] = '';
+    $local_result['clear'] = false;
     if($code === 200) {
 //        $document = mb_convert_encoding($document, 'utf-8', mb_detect_encoding($document));
         $data = str_get_html($document);
@@ -55,6 +56,7 @@ $callback = function($document,$url,$code,$target) {
             }
 
         }
+        ($local_result['rd'] != 'rd'&&$local_result['nix'] != 'ni'&&$local_result['nfl'] != 'nf')?$local_result['clear'] = true:'';
         $data->clear();
         unset($data, $head);
     }

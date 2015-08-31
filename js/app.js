@@ -101,10 +101,11 @@ app.controller('MainCtrl', ['$scope', '$filter', '$http', function ($scope, $fil
         $scope.filteredLink.live.length > 19 ? $scope.More15 = true : '';
         $scope.positions.count = $scope.filteredLink.live.length;
         $scope.filteredLink.dead = $filter('filter')(flinks, {live: false});
-        $scope.filteredLink.clean = $filter('filter')(flinks, {nfl: '', nix: '', rd: ''});
+        $scope.filteredLink.clean = $filter('filter')(flinks, {clear: true});
         $scope.filteredLink.nofollow = $filter('filter')(flinks, {nfl: 'nf'});
         $scope.filteredLink.noindex = $filter('filter')(flinks, {nix: 'ni'});
         $scope.filteredLink.redirect = $filter('filter')(flinks, {rd: 'rd'});
+        itter=0;
 
         var gramma = String($scope.filteredLink.live.length+$scope.filteredLink.dead.length);
         (gramma!='11'&&gramma.substr(gramma.length-1,1)=="1")? $scope.grammaticFormHeader='поста':$scope.grammaticFormHeader='постов';
