@@ -497,9 +497,12 @@
   .underscription{
     color: #000;
     font-family: "Museo Sans Cyrl 300";
-    font-size: 0.9vw;
     font-size: 0.92vw;
-    margin: 1vw 0 0 7vw;
+    margin: 2vw 0 0 7vw;
+    float: right;
+    z-index: 4;
+    position: relative;
+    left: -1.3vw;
     a{
       color: #000;
       @extend %soft_decoration;
