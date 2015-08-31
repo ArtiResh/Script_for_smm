@@ -161,7 +161,7 @@ $(document).ready(function () {
     $('.in .hidden').mouseleave(function () {
         $(this).removeClass('slideInDown');
     });
-    $('.main_wrapper').focus(function () {
+    $('.btn_wrapper').mouseenter(function () {
         $('.btn_status.hidden').removeClass('slideInDown');
     });
 });

@@ -413,6 +413,7 @@
     }
   }
   .next_prev{
+    z-index: 3;
     position: relative;
     width: 37vw;
     margin-top: 0.5vw;
@@ -434,6 +435,15 @@
       left: 25.3vw;
     }
   }
+  .btn_wrapper{
+    position: absolute;
+    background: #ffffff;
+    width: 35vw;
+    height: 18vw;
+    z-index: 2;
+    left: 46vw;
+    top: 50vw;
+  }
   .btn_copy{
     position: relative;
     @extend %button-gr;
@@ -441,6 +451,7 @@
     margin-left: 7vw;
     width: 21.5vw;
     cursor: pointer;
+    z-index: 3;
     >div{
       width: 17vw;
     }
@@ -448,7 +459,7 @@
       position: absolute;
       z-index: 10;
       color: #FFF;
-      font-family: "Museo Sans Cyrl";
+      font-family: "Museo Sans Cyrl 300";
       font-size: 1.12vw;
       width: 23.5vw;
       height: 8.4vw;

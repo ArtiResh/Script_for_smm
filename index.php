@@ -9,7 +9,7 @@
     <link href="stylesheets/style.css" rel="stylesheet">
 </head>
 <body>
-<img src="logo_smm.png" alt="Логотип SMM" class="lodo_smm">
+<img src="logo.svg" alt="Логотип SMM" class="lodo_smm">
 
 <div class="main_wrapper" ng-controller="MainCtrl">
     <div class="in">
@@ -132,6 +132,7 @@
         <a href="javascript:none;" ng-click="showLess()" ng-show="Less15"><span>←</span> предыдущие 20</a>
         <a href="javascript:none;" ng-click="showMore()" ng-show="More15" id="next">следующие 20 <span>→</span></a>
     </div>
+    <div class="btn_wrapper"></div>
     <div class="btn_copy" ng-class="{'active':showResult}">
         <div><span clip-copy="joiner(filteredLink.live)" class="clicker">Скопировать все живые</span></div>
         <div class="arrow">

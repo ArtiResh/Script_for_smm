@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* line 5, ../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -21,64 +21,64 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
 @font-face {
   font-family: "Museo Sans Cyrl 100";
-  src: url('../fonts/MuseoSansCyrl_100.woff?1440710851') format('woff'), url('../fonts/MuseoSansCyrl_100.otf?1440187991') format('opentype'), url('../fonts/MuseoSansCyrl_100.ttf?1440710850') format('truetype');
+  src: url('../fonts/MuseoSansCyrl_100.woff?1440750480') format('woff'), url('../fonts/MuseoSansCyrl_100.otf?1440750480') format('opentype'), url('../fonts/MuseoSansCyrl_100.ttf?1440750480') format('truetype');
 }
 @font-face {
   font-family: "Museo Sans Cyrl 300";
-  src: url('../fonts/MuseoSansCyrl_300.woff?1440710857') format('woff'), url('../fonts/MuseoSansCyrl_300.otf?1440187991') format('opentype'), url('../fonts/MuseoSansCyrl_300.ttf?1440710857') format('truetype');
+  src: url('../fonts/MuseoSansCyrl_300.woff?1440750480') format('woff'), url('../fonts/MuseoSansCyrl_300.otf?1440750480') format('opentype'), url('../fonts/MuseoSansCyrl_300.ttf?1440750480') format('truetype');
 }
 @font-face {
   font-family: "Museo Sans Cyrl 500";
-  src: url('../fonts/MuseoSansCyrl_300.woff?1440710857') format('woff'), url('../fonts/MuseoSansCyrl_300.otf?1440187991') format('opentype'), url('../fonts/MuseoSansCyrl_300.ttf?1440710857') format('truetype');
+  src: url('../fonts/MuseoSansCyrl_300.woff?1440750480') format('woff'), url('../fonts/MuseoSansCyrl_300.otf?1440750480') format('opentype'), url('../fonts/MuseoSansCyrl_300.ttf?1440750480') format('truetype');
 }
 @font-face {
   font-family: "Minion Pro Regular";
-  src: url('../fonts/MinionPro-Regular.woff?1440793049') format('woff'), url('../fonts/MinionPro-Regular.otf?1440793049') format('opentype'), url('../fonts/MinionPro-Regular.ttf?1440793049') format('truetype');
+  src: url('../fonts/MinionPro-Regular.woff?1440757172') format('woff'), url('../fonts/MinionPro-Regular.otf?1265284842') format('opentype'), url('../fonts/MinionPro-Regular.ttf?1440757172') format('truetype');
 }
 @keyframes slideInDown {
   from {
@@ -499,13 +499,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 /* line 415, ../sass/style.scss */
 .main_wrapper .next_prev {
+  z-index: 3;
   position: relative;
   width: 37vw;
   margin-top: 0.5vw;
   margin-left: 6.5vw;
   height: 3vw;
 }
-/* line 421, ../sass/style.scss */
+/* line 422, ../sass/style.scss */
 .main_wrapper .next_prev a {
   position: absolute;
   color: #000;
@@ -515,31 +516,42 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-family: "Museo Sans Cyrl 300";
   border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
 }
-/* line 429, ../sass/style.scss */
+/* line 430, ../sass/style.scss */
 .main_wrapper .next_prev a span {
   font-family: "Minion Pro Regular";
 }
-/* line 433, ../sass/style.scss */
+/* line 434, ../sass/style.scss */
 .main_wrapper .next_prev #next {
   left: 25.3vw;
 }
-/* line 437, ../sass/style.scss */
+/* line 438, ../sass/style.scss */
+.main_wrapper .btn_wrapper {
+  position: absolute;
+  background: #ffffff;
+  width: 35vw;
+  height: 18vw;
+  z-index: 2;
+  left: 46vw;
+  top: 50vw;
+}
+/* line 447, ../sass/style.scss */
 .main_wrapper .btn_copy {
   position: relative;
   margin-left: 7vw;
   width: 21.5vw;
   cursor: pointer;
+  z-index: 3;
 }
-/* line 444, ../sass/style.scss */
+/* line 455, ../sass/style.scss */
 .main_wrapper .btn_copy > div {
   width: 17vw;
 }
-/* line 447, ../sass/style.scss */
+/* line 458, ../sass/style.scss */
 .main_wrapper .btn_copy .btn_status {
   position: absolute;
   z-index: 10;
   color: #FFF;
-  font-family: "Museo Sans Cyrl";
+  font-family: "Museo Sans Cyrl 300";
   font-size: 1.12vw;
   width: 23.5vw;
   height: 8.4vw;
@@ -549,18 +561,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   text-align: left;
   display: none;
 }
-/* line 462, ../sass/style.scss */
+/* line 473, ../sass/style.scss */
 .main_wrapper .btn_copy .btn_status ul {
   list-style: none;
   padding: 0.3vw 0 0 1.2vw;
 }
-/* line 465, ../sass/style.scss */
+/* line 476, ../sass/style.scss */
 .main_wrapper .btn_copy .btn_status ul li {
   padding-bottom: 0.7vw;
   width: 100%;
   cursor: pointer;
 }
-/* line 469, ../sass/style.scss */
+/* line 480, ../sass/style.scss */
 .main_wrapper .btn_copy .btn_status ul li span {
   float: right;
   margin-right: 2.1vw;
@@ -569,7 +581,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-size: 0.9vw;
   margin-top: 0.1vw;
 }
-/* line 485, ../sass/style.scss */
+/* line 496, ../sass/style.scss */
 .main_wrapper .underscription {
   color: #000;
   font-family: "Museo Sans Cyrl 300";
@@ -577,12 +589,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-size: 0.92vw;
   margin: 1vw 0 0 7vw;
 }
-/* line 491, ../sass/style.scss */
+/* line 502, ../sass/style.scss */
 .main_wrapper .underscription a {
   color: #000;
 }
 
-/* line 498, ../sass/style.scss */
+/* line 509, ../sass/style.scss */
 footer {
   height: 5vw;
   padding: 0.5vw 5.75vw 3vw 7.75vw;
@@ -591,32 +603,32 @@ footer {
   font-family: "Museo Sans Cyrl 100";
   font-size: 1.1vw;
 }
-/* line 505, ../sass/style.scss */
+/* line 516, ../sass/style.scss */
 footer > div {
   display: inline-block;
 }
-/* line 507, ../sass/style.scss */
+/* line 518, ../sass/style.scss */
 footer > div a {
   color: #696969;
   height: 1.5vw;
 }
-/* line 512, ../sass/style.scss */
+/* line 523, ../sass/style.scss */
 footer > div p {
   height: 1.6vw;
 }
-/* line 516, ../sass/style.scss */
+/* line 527, ../sass/style.scss */
 footer .for {
   float: right;
   text-align: right;
 }
 
-/* line 521, ../sass/style.scss */
+/* line 532, ../sass/style.scss */
 .clicker {
   position: relative;
   z-index: 8;
 }
 
-/* line 526, ../sass/style.scss */
+/* line 537, ../sass/style.scss */
 .animate-enter,
 .animate-leave {
   -webkit-transition: 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;
