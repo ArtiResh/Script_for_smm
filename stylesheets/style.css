@@ -582,13 +582,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 482, ../sass/style.scss */
 .main_wrapper .btn_copy .info_tip {
   position: absolute;
+  opacity: 0;
   top: -7.5vw;
   left: 0;
   color: #FFF;
   font-family: "Museo Sans Cyrl 300";
   font-size: 1.1vw;
   line-height: 1.5vw;
-  opacity: 0.85;
   width: 28.8vw;
   height: 4vw;
   background-color: #000;
@@ -709,7 +709,7 @@ footer .for {
   }
   to {
     transform: translate3d(0, 0, 0);
-    opacity: 1;
+    opacity: 0.85;
   }
 }
 /* ------------------------------------------- */
@@ -749,7 +749,7 @@ footer .for {
   transform: translateY(0);
   -ms-transform: translateY(0);
   -webkit-transform: translateY(0);
-  opacity: 1;
+  opacity: 0.85;
 }
 
 /* line 122, ../sass/ng-animation.scss */
@@ -760,7 +760,7 @@ footer .for {
   -webkit-transform: translateY(0);
   transition-duration: 250ms;
   -webkit-transition-duration: 250ms;
-  opacity: 1;
+  opacity: 0.85;
 }
 
 /* line 128, ../sass/ng-animation.scss */
@@ -780,7 +780,7 @@ footer .for {
   -webkit-transform: translateY(0);
   transition-duration: 250ms;
   -webkit-transition-duration: 250ms;
-  opacity: 1;
+  opacity: 0.85;
 }
 
 /* line 139, ../sass/ng-animation.scss */
@@ -810,5 +810,5 @@ footer .for {
   transform: translateY(0);
   -ms-transform: translateY(0);
   -webkit-transform: translateY(0);
-  opacity: 1;
+  opacity: 0.85;
 }

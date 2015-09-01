@@ -132,18 +132,23 @@ app.controller('MainCtrl', ['$scope', '$filter', '$http', function ($scope, $fil
             });
         }
     };
+    $scope.tips = function(type){
+        console.log(type);
+        switch (type) {
+            case 'live':
+                $scope.textTip = "Живые ссылки на страницы к постам (чистые)";
+                $scope.showTip = "slide-top";
+        }
+    };
+
 
     $scope.joiner = function (st_arr) {
         var result = '';
         for (var i = 0; i < st_arr.length; i++) {
             result = result + (st_arr[i].url + "\n");
         }
+
         return result;
-        console.log(st_arr);
-        switch (st_arr) {
-            case  $scope.filteredLink.clean:
-                $scope.showTip = "Живые ссылки на страницы к постам (чистые)";
-        }
     };
 
     $scope.showSaveMenu = function () {

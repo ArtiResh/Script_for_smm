@@ -143,9 +143,9 @@
     </div>
     <div class="btn_wrapper"></div>
     <div class="btn_copy" ng-class="{'active':showResult,'deleted':showDead}">
-        <div class="info_tip" ng-class="slide-top" ng-if="{showTip}"><p>{{textTip}}
+        <div class="info_tip" ng-animate="{showTip}"><p>{{textTip}}
             скопированы в буфер обмена</p></div>
-        <div ng-show="!showDead"><span clip-copy="joiner(filteredLink.live)" class="clicker" >Скопировать все живые</span></div>
+        <div ng-show="!showDead"><span clip-copy="joiner(filteredLink.live)" ng-click="tips('live')" class="clicker">Скопировать все живые</span></div>
         <div class="arrow" ng-show="!showDead">
             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                  x="0px" y="0px"
@@ -162,7 +162,7 @@
 
         <div class="btn_status hidden" ng-show="showSaveMenu()">
             <ul>
-                <li class="copies clicker" clip-copy="joiner(filteredLink.clean)">Скопировать все чистые ссылки
+                <li class="copies clicker" clip-copy="joiner(filteredLink.clean,'live')">Скопировать все чистые ссылки
                     <span>{{filteredLink.clean.length}}</span>
                 </li>
                 <li class="copies clicker" clip-copy="joiner(filteredLink.nofollow)">Скопировать все ссылки с nofollow
