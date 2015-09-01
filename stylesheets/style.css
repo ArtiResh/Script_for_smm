@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* line 5, ../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -21,64 +21,64 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
 @font-face {
   font-family: "Museo Sans Cyrl 100";
-  src: url('../fonts/MuseoSansCyrl_100.woff?1440710851') format('woff'), url('../fonts/MuseoSansCyrl_100.otf?1440187991') format('opentype'), url('../fonts/MuseoSansCyrl_100.ttf?1440710850') format('truetype');
+  src: url('../fonts/MuseoSansCyrl_100.woff?1440750480') format('woff'), url('../fonts/MuseoSansCyrl_100.otf?1440750480') format('opentype'), url('../fonts/MuseoSansCyrl_100.ttf?1440750480') format('truetype');
 }
 @font-face {
   font-family: "Museo Sans Cyrl 300";
-  src: url('../fonts/MuseoSansCyrl_300.woff?1440710857') format('woff'), url('../fonts/MuseoSansCyrl_300.otf?1440187991') format('opentype'), url('../fonts/MuseoSansCyrl_300.ttf?1440710857') format('truetype');
+  src: url('../fonts/MuseoSansCyrl_300.woff?1440750480') format('woff'), url('../fonts/MuseoSansCyrl_300.otf?1440750480') format('opentype'), url('../fonts/MuseoSansCyrl_300.ttf?1440750480') format('truetype');
 }
 @font-face {
   font-family: "Museo Sans Cyrl 500";
-  src: url('../fonts/MuseoSansCyrl_300.woff?1440710857') format('woff'), url('../fonts/MuseoSansCyrl_300.otf?1440187991') format('opentype'), url('../fonts/MuseoSansCyrl_300.ttf?1440710857') format('truetype');
+  src: url('../fonts/MuseoSansCyrl_300.woff?1440750480') format('woff'), url('../fonts/MuseoSansCyrl_300.otf?1440750480') format('opentype'), url('../fonts/MuseoSansCyrl_300.ttf?1440750480') format('truetype');
 }
 @font-face {
   font-family: "Minion Pro Regular";
-  src: url('../fonts/MinionPro-Regular.woff?1440793049') format('woff'), url('../fonts/MinionPro-Regular.otf?1440793049') format('opentype'), url('../fonts/MinionPro-Regular.ttf?1440793049') format('truetype');
+  src: url('../fonts/MinionPro-Regular.woff?1440757172') format('woff'), url('../fonts/MinionPro-Regular.otf?1265284842') format('opentype'), url('../fonts/MinionPro-Regular.ttf?1440757172') format('truetype');
 }
 @keyframes slideInDown {
   from {
@@ -245,7 +245,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   padding-bottom: 1.8vw;
 }
 /* line 179, ../sass/style.scss */
+.main_wrapper .in .input_searchline p {
+  margin-bottom: 0.3vw;
+}
+/* line 182, ../sass/style.scss */
 .main_wrapper .in .input_searchline div {
+  margin-top: 0.7vw;
   padding-top: 0.2vw;
   width: 22.3vw;
   height: 2vw;
@@ -256,7 +261,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   vertical-align: middle;
   padding-left: 0.6vw;
 }
-/* line 190, ../sass/style.scss */
+/* line 194, ../sass/style.scss */
 .main_wrapper .in .input_searchline div input {
   border: none;
   color: #000;
@@ -266,18 +271,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: 1.5vw;
   width: 18.5vw;
 }
-/* line 198, ../sass/style.scss */
+/* line 202, ../sass/style.scss */
 .main_wrapper .in .input_searchline div input:focus {
   outline: none;
 }
-/* line 205, ../sass/style.scss */
+/* line 209, ../sass/style.scss */
 .main_wrapper .in .input_listblock div {
   width: 33.2vw;
   height: 30.5vw;
   border: 0.1vw solid #38BEA9;
   vertical-align: top;
 }
-/* line 212, ../sass/style.scss */
+/* line 216, ../sass/style.scss */
 .main_wrapper .in .input_listblock textarea {
   border: none;
   color: #000;
@@ -288,25 +293,25 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin: 0.5vw 0 0 1.2vw;
   resize: none;
 }
-/* line 221, ../sass/style.scss */
+/* line 225, ../sass/style.scss */
 .main_wrapper .in .input_listblock textarea:focus {
   outline: none;
 }
-/* line 226, ../sass/style.scss */
+/* line 230, ../sass/style.scss */
 .main_wrapper .in .in_excel {
-  padding: 1.2vw 0 1.7vw;
+  padding: 1.2vw 0 1.95vw;
   position: relative;
 }
-/* line 229, ../sass/style.scss */
+/* line 233, ../sass/style.scss */
 .main_wrapper .in .in_excel input[type="checkbox"] {
   display: none;
 }
-/* line 232, ../sass/style.scss */
+/* line 236, ../sass/style.scss */
 .main_wrapper .in .in_excel input[type="checkbox"] + label {
   cursor: pointer;
   padding-left: 0;
 }
-/* line 236, ../sass/style.scss */
+/* line 240, ../sass/style.scss */
 .main_wrapper .in .in_excel input[type="checkbox"] + label::before {
   content: "";
   display: inline-block;
@@ -315,11 +320,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   background: url("../checkboxes.png");
   background-size: 1.2vw 2.5vw;
 }
-/* line 244, ../sass/style.scss */
+/* line 248, ../sass/style.scss */
 .main_wrapper .in .in_excel input[type="checkbox"]:checked + label::before {
   background-position: 0 -1.3vw;
 }
-/* line 247, ../sass/style.scss */
+/* line 251, ../sass/style.scss */
 .main_wrapper .in .in_excel span {
   color: #4E4E4E;
   font-family: "Museo Sans Cyrl 500";
@@ -327,11 +332,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   position: relative;
   top: -0.2vw;
 }
-/* line 257, ../sass/style.scss */
+/* line 261, ../sass/style.scss */
 .main_wrapper .in .btn_green .arrow {
   left: -0.3vw;
 }
-/* line 260, ../sass/style.scss */
+/* line 264, ../sass/style.scss */
 .main_wrapper .in .btn_green .btn_list {
   position: absolute;
   top: 0;
@@ -346,27 +351,27 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-size: 1.12vw;
   cursor: default;
 }
-/* line 276, ../sass/style.scss */
+/* line 280, ../sass/style.scss */
 .main_wrapper .in .btn_green .btn_list p {
   margin-left: 0.6vw;
   padding: 0.2vw 0 0.5vw;
 }
-/* line 279, ../sass/style.scss */
+/* line 283, ../sass/style.scss */
 .main_wrapper .in .btn_green .btn_list p span {
   cursor: pointer;
   font-family: "Museo Sans Cyrl 300";
   border-bottom: 1px dotted rgba(255, 255, 255, 0.6);
 }
-/* line 283, ../sass/style.scss */
+/* line 287, ../sass/style.scss */
 .main_wrapper .in .btn_green .btn_list p span:hover {
   border-bottom: none;
 }
-/* line 292, ../sass/style.scss */
+/* line 296, ../sass/style.scss */
 .main_wrapper .out {
   margin: 0 1.7vw 0.1vw 0;
   float: right;
 }
-/* line 295, ../sass/style.scss */
+/* line 299, ../sass/style.scss */
 .main_wrapper .out .out_headblock {
   color: #000;
   font-family: "Museo Sans Cyrl 500";
@@ -374,12 +379,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   padding-bottom: 1.6vw;
   height: 3.8vw;
 }
-/* line 301, ../sass/style.scss */
+/* line 305, ../sass/style.scss */
 .main_wrapper .out .out_headblock a {
   color: #000;
   text-decoration: none;
 }
-/* line 308, ../sass/style.scss */
+/* line 312, ../sass/style.scss */
 .main_wrapper .out .subheader .subheader_link {
   display: inline-block;
   font-family: "Museo Sans Cyrl 100";
@@ -388,32 +393,32 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   color: #000;
   width: 8.4vw;
 }
-/* line 315, ../sass/style.scss */
+/* line 319, ../sass/style.scss */
 .main_wrapper .out .subheader .subheader_link span {
   color: #CDCDCD;
   padding-left: 0.6vw;
 }
-/* line 319, ../sass/style.scss */
+/* line 323, ../sass/style.scss */
 .main_wrapper .out .subheader .subheader_link .slable {
   border-bottom: 1px dotted rgba(224, 217, 217, 0.94);
   cursor: pointer;
   padding-left: 0;
 }
-/* line 324, ../sass/style.scss */
+/* line 328, ../sass/style.scss */
 .main_wrapper .out .subheader .subheader_link.chosen {
   font-family: "Museo Sans Cyrl 500";
 }
-/* line 326, ../sass/style.scss */
+/* line 330, ../sass/style.scss */
 .main_wrapper .out .subheader .subheader_link.chosen .slable {
   border-bottom: none;
   cursor: default;
   color: #000;
 }
-/* line 333, ../sass/style.scss */
+/* line 337, ../sass/style.scss */
 .main_wrapper .out .subheader .del {
   width: 10vw;
 }
-/* line 337, ../sass/style.scss */
+/* line 341, ../sass/style.scss */
 .main_wrapper .out .resultblock {
   margin: 1.2vw 0 0 -2vw;
   width: 42.5vw;
@@ -421,7 +426,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   position: relative;
   z-index: 4;
 }
-/* line 343, ../sass/style.scss */
+/* line 347, ../sass/style.scss */
 .main_wrapper .out .resultblock .loader {
   width: 6vw;
   height: 6vw;
@@ -430,16 +435,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   top: 10vw;
   left: 13vw;
 }
-/* line 351, ../sass/style.scss */
+/* line 355, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link {
   margin-top: 0.56vw;
 }
-/* line 353, ../sass/style.scss */
+/* line 357, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link > div {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 357, ../sass/style.scss */
+/* line 361, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .number {
   color: #CDCDCD;
   font-family: "Museo Sans Cyrl 100";
@@ -448,18 +453,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   text-align: center;
   margin-left: -1vw;
 }
-/* line 365, ../sass/style.scss */
+/* line 369, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .link {
   position: relative;
   overflow-x: hidden;
   width: 33vw;
   height: 1.2vw;
 }
-/* line 370, ../sass/style.scss */
+/* line 374, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .link div {
   overflow: hidden;
 }
-/* line 373, ../sass/style.scss */
+/* line 377, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .link a {
   text-decoration: none;
   position: absolute;
@@ -468,11 +473,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-family: "Museo Sans Cyrl 300";
   font-size: 1.1vw;
 }
-/* line 380, ../sass/style.scss */
+/* line 384, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .link a p {
   position: absolute;
 }
-/* line 386, ../sass/style.scss */
+/* line 390, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .shadow {
   position: relative;
   margin-left: 0.3vw;
@@ -480,12 +485,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: 1.2vw;
   box-shadow: -1.3vw 0 1.2vw 0.3vw #fff;
 }
-/* line 393, ../sass/style.scss */
+/* line 397, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .add_info {
   margin-left: 0.4vw;
   height: 1vw;
 }
-/* line 396, ../sass/style.scss */
+/* line 400, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .add_info span {
   position: relative;
   color: #38BEA9;
@@ -495,7 +500,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   padding-right: 0.3vw;
   cursor: pointer;
 }
-/* line 404, ../sass/style.scss */
+/* line 408, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .add_info span:after {
   display: none;
   text-align: center;
@@ -510,27 +515,27 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   background-color: rgba(173, 173, 173, 0.2);
   border-radius: 0.4vw;
 }
-/* line 418, ../sass/style.scss */
+/* line 422, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .add_info span:hover:after {
   display: block;
   opacity: 0.9;
 }
-/* line 423, ../sass/style.scss */
+/* line 427, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .add_info .rd:after {
   content: "Ссылка с редиректом";
   padding: 0.4vw;
   height: 0.8vw;
   top: -2vw;
 }
-/* line 429, ../sass/style.scss */
+/* line 433, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .add_info .nix:after {
   content: "Ссылка с аттрибутом noindex";
 }
-/* line 432, ../sass/style.scss */
+/* line 436, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .add_info .nfl:after {
   content: "Ссылка с аттрибутом nofollow";
 }
-/* line 439, ../sass/style.scss */
+/* line 443, ../sass/style.scss */
 .main_wrapper .next_prev {
   z-index: 3;
   position: relative;
@@ -539,7 +544,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin-left: 6.5vw;
   height: 3vw;
 }
-/* line 446, ../sass/style.scss */
+/* line 450, ../sass/style.scss */
 .main_wrapper .next_prev a {
   position: absolute;
   color: #000;
@@ -549,15 +554,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-family: "Museo Sans Cyrl 300";
   border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
 }
-/* line 454, ../sass/style.scss */
+/* line 458, ../sass/style.scss */
 .main_wrapper .next_prev a span {
   font-family: "Minion Pro Regular";
 }
-/* line 458, ../sass/style.scss */
+/* line 462, ../sass/style.scss */
 .main_wrapper .next_prev #next {
   left: 25.3vw;
 }
-/* line 462, ../sass/style.scss */
+/* line 466, ../sass/style.scss */
 .main_wrapper .btn_wrapper {
   position: absolute;
   background: #ffffff;
@@ -567,7 +572,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   left: 46vw;
   top: 50vw;
 }
-/* line 471, ../sass/style.scss */
+/* line 475, ../sass/style.scss */
 .main_wrapper .btn_copy {
   position: relative;
   margin-left: 7vw;
@@ -575,11 +580,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   cursor: pointer;
   z-index: 3;
 }
-/* line 479, ../sass/style.scss */
+/* line 483, ../sass/style.scss */
 .main_wrapper .btn_copy > div {
   width: 17vw;
 }
-/* line 482, ../sass/style.scss */
+/* line 486, ../sass/style.scss */
 .main_wrapper .btn_copy .info_tip {
   position: absolute;
   opacity: 0;
@@ -593,19 +598,51 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: 4vw;
   background-color: #000;
 }
-/* line 495, ../sass/style.scss */
+/* line 499, ../sass/style.scss */
+.main_wrapper .btn_copy .info_tip.slide-top {
+  -webkit-transition: all 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition: all 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -ms-transition: all 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -o-transition: all 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  /* easeOutQuad */
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -ms-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -o-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 1;
+  /* easeOutQuad */
+}
+/* line 514, ../sass/style.scss */
+.main_wrapper .btn_copy .info_tip.slide-bottom {
+  -webkit-transition: all 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition: all 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -ms-transition: all 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -o-transition: all 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  /* easeOutQuad */
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -ms-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -o-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 0;
+  /* easeOutQuad */
+}
+/* line 529, ../sass/style.scss */
 .main_wrapper .btn_copy .info_tip p {
   opacity: 1;
 }
-/* line 499, ../sass/style.scss */
+/* line 533, ../sass/style.scss */
 .main_wrapper .btn_copy.deleted {
   width: 20.5vw;
 }
-/* line 501, ../sass/style.scss */
+/* line 535, ../sass/style.scss */
 .main_wrapper .btn_copy.deleted .del_lable {
   width: 19.5vw;
 }
-/* line 505, ../sass/style.scss */
+/* line 539, ../sass/style.scss */
 .main_wrapper .btn_copy .btn_status {
   position: absolute;
   z-index: 10;
@@ -619,18 +656,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   text-align: left;
   display: none;
 }
-/* line 519, ../sass/style.scss */
+/* line 553, ../sass/style.scss */
 .main_wrapper .btn_copy .btn_status ul {
   list-style: none;
   padding: 0.3vw 0 0 1.2vw;
 }
-/* line 522, ../sass/style.scss */
+/* line 556, ../sass/style.scss */
 .main_wrapper .btn_copy .btn_status ul li {
   padding-bottom: 0.7vw;
   width: 100%;
   cursor: pointer;
 }
-/* line 526, ../sass/style.scss */
+/* line 560, ../sass/style.scss */
 .main_wrapper .btn_copy .btn_status ul li span {
   float: right;
   margin-right: 2.1vw;
@@ -639,7 +676,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-size: 0.9vw;
   margin-top: 0.1vw;
 }
-/* line 542, ../sass/style.scss */
+/* line 576, ../sass/style.scss */
 .main_wrapper .underscription {
   color: #000;
   font-family: "Museo Sans Cyrl 300";
@@ -650,12 +687,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   position: relative;
   left: -1.3vw;
 }
-/* line 551, ../sass/style.scss */
+/* line 585, ../sass/style.scss */
 .main_wrapper .underscription a {
   color: #000;
 }
 
-/* line 558, ../sass/style.scss */
+/* line 592, ../sass/style.scss */
 footer {
   height: 5vw;
   padding: 0.5vw 5.75vw 3vw 7.75vw;
@@ -664,41 +701,29 @@ footer {
   font-family: "Museo Sans Cyrl 100";
   font-size: 1.1vw;
 }
-/* line 565, ../sass/style.scss */
+/* line 599, ../sass/style.scss */
 footer > div {
   display: inline-block;
 }
-/* line 567, ../sass/style.scss */
+/* line 601, ../sass/style.scss */
 footer > div a {
   color: #696969;
   height: 1.5vw;
 }
-/* line 572, ../sass/style.scss */
+/* line 606, ../sass/style.scss */
 footer > div p {
   height: 1.6vw;
 }
-/* line 576, ../sass/style.scss */
+/* line 610, ../sass/style.scss */
 footer .for {
   float: right;
   text-align: right;
 }
 
-/* line 582, ../sass/style.scss */
+/* line 616, ../sass/style.scss */
 .clicker {
   position: relative;
   z-index: 8;
-}
-
-/* line 587, ../sass/style.scss */
-.animate-enter,
-.animate-leave {
-  -webkit-transition: 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;
-  -moz-transition: 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;
-  -ms-transition: 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;
-  -o-transition: 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;
-  transition: 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;
-  position: relative;
-  display: block;
 }
 
 @keyframes slideInDown {
@@ -711,104 +736,4 @@ footer .for {
     transform: translate3d(0, 0, 0);
     opacity: 0.85;
   }
-}
-/* ------------------------------------------- */
-/* Slide Top
-/* ------------------------------------------- */
-/* line 109, ../sass/ng-animation.scss */
-/* line 615, ../sass/style.scss */
-.slide-top {
-  -webkit-transition: all 0 cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -moz-transition: all 0 cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -ms-transition: all 0 cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -o-transition: all 0 cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition: all 0 cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  /* easeOutQuad */
-  -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -moz-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -ms-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -o-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  /* easeOutQuad */
-}
-
-/* line 111, ../sass/ng-animation.scss */
-/* line 630, ../sass/style.scss */
-.slide-top.ng-enter {
-  transform: translateY(60px);
-  -ms-transform: translateY(60px);
-  -webkit-transform: translateY(60px);
-  transition-duration: 250ms;
-  -webkit-transition-duration: 250ms;
-  opacity: 0;
-}
-
-/* line 117, ../sass/ng-animation.scss */
-/* line 639, ../sass/style.scss */
-.slide-top.ng-enter-active {
-  transform: translateY(0);
-  -ms-transform: translateY(0);
-  -webkit-transform: translateY(0);
-  opacity: 0.85;
-}
-
-/* line 122, ../sass/ng-animation.scss */
-/* line 646, ../sass/style.scss */
-.slide-top.ng-leave {
-  transform: translateY(0);
-  -ms-transform: translateY(0);
-  -webkit-transform: translateY(0);
-  transition-duration: 250ms;
-  -webkit-transition-duration: 250ms;
-  opacity: 0.85;
-}
-
-/* line 128, ../sass/ng-animation.scss */
-/* line 655, ../sass/style.scss */
-.slide-top.ng-leave-active {
-  transform: translateY(60px);
-  -ms-transform: translateY(60px);
-  -webkit-transform: translateY(60px);
-  opacity: 0;
-}
-
-/* line 134, ../sass/ng-animation.scss */
-/* line 662, ../sass/style.scss */
-.slide-top.ng-hide-add {
-  transform: translateY(0);
-  -ms-transform: translateY(0);
-  -webkit-transform: translateY(0);
-  transition-duration: 250ms;
-  -webkit-transition-duration: 250ms;
-  opacity: 0.85;
-}
-
-/* line 139, ../sass/ng-animation.scss */
-/* line 671, ../sass/style.scss */
-.slide-top.ng-hide-add.ng-hide-add-active {
-  transform: translateY(60px);
-  -ms-transform: translateY(60px);
-  -webkit-transform: translateY(60px);
-  opacity: 0;
-}
-
-/* line 145, ../sass/ng-animation.scss */
-/* line 678, ../sass/style.scss */
-.slide-top.ng-hide-remove {
-  transform: translateY(60px);
-  -ms-transform: translateY(60px);
-  -webkit-transform: translateY(60px);
-  transition-duration: 250ms;
-  -webkit-transition-duration: 250ms;
-  display: block !important;
-  opacity: 0;
-}
-
-/* line 151, ../sass/ng-animation.scss */
-/* line 688, ../sass/style.scss */
-.slide-top.ng-hide-remove.ng-hide-remove-active {
-  transform: translateY(0);
-  -ms-transform: translateY(0);
-  -webkit-transform: translateY(0);
-  opacity: 0.85;
 }

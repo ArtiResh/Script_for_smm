@@ -22,7 +22,7 @@ app.config(['$httpProvider', function ($httpProvider) {
     $httpProvider.defaults.headers.common['Accept'] = 'application/json; charset=utf-8';
 }]);
 
-app.controller('MainCtrl', ['$scope', '$filter', '$http', function ($scope, $filter, $http) {
+app.controller('MainCtrl', ['$scope', '$filter', '$http', '$timeout', function ($scope, $filter, $http, $timeout) {
     $scope.showLive = false;
     $scope.showDead = false;
     $scope.showResult = false;
@@ -104,7 +104,6 @@ app.controller('MainCtrl', ['$scope', '$filter', '$http', function ($scope, $fil
         $scope.filteredLink.live.length > 19 ? $scope.More15 = true : '';
         $scope.positions.count = $scope.filteredLink.live.length;
         $scope.filteredLink.dead = $filter('filter')(flinks, {live: false});
-        $scope.filteredLink.clean = $filter('filter')(flinks, {clear: true});
         $scope.filteredLink.nofollow = $filter('filter')(flinks, {nfl: 'nf'});
         $scope.filteredLink.noindex = $filter('filter')(flinks, {nix: 'ni'});
         $scope.filteredLink.redirect = $filter('filter')(flinks, {rd: 'rd'});
@@ -132,12 +131,29 @@ app.controller('MainCtrl', ['$scope', '$filter', '$http', function ($scope, $fil
             });
         }
     };
-    $scope.tips = function(type){
-        console.log(type);
-        switch (type) {
-            case 'live':
-                $scope.textTip = "Живые ссылки на страницы к постам (чистые)";
-                $scope.showTip = "slide-top";
+    $scope.tips = function (type, count) {
+        if (count > 0) {
+            switch (type) {
+                case 'live':
+                    $scope.textTip = "Живые ссылки на страницы к постам (чистые)";
+                    break;
+                case 'dead':
+                    $scope.textTip = "Удаленные ссылки на страницы к постам";
+                    break;
+                case 'nfl':
+                    $scope.textTip = "Nofollow сслыки на страницы к постам";
+                    break;
+                case 'nix':
+                    $scope.textTip = "Noindex сслыки на страницы к постам";
+                    break;
+                case 'rd':
+                    $scope.textTip = "Redirect сслыки на страницы к постам";
+                    break;
+            }
+            $scope.showTip = "slide-top";
+            $timeout(function () {
+                $scope.showTip = "slide-bottom";
+            }, 5000);
         }
     };
 
@@ -181,6 +197,9 @@ $(document).ready(function () {
     $('.btn_wrapper').mouseenter(function () {
         $('.btn_status.hidden').removeClass('slideInDown');
     });
+    //$('#copy_live').click(function(){
+    //   alert('nflfv');
+    //});
 });
 
 

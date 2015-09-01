@@ -129,9 +129,6 @@
                 </div>
                 <div class="shadow"></div>
                 <div ng-show="sofisticatedCheck" class="add_info">
-                    <!--                    <span ng-if=link.rdcl class="rd">{{link.rd}}</span>-->
-                    <!--                    <span ng-if=link.nix class="nix">{{link.nix}}</span>-->
-                    <!--                    <span ng-if=link.nfl class="nfl">{{link.nfl}}</span>-->
                 </div>
             </div>
         </div>
@@ -143,9 +140,10 @@
     </div>
     <div class="btn_wrapper"></div>
     <div class="btn_copy" ng-class="{'active':showResult,'deleted':showDead}">
-        <div class="info_tip" ng-animate="{showTip}"><p>{{textTip}}
-            скопированы в буфер обмена</p></div>
-        <div ng-show="!showDead"><span clip-copy="joiner(filteredLink.live)" ng-click="tips('live')" class="clicker">Скопировать все живые</span></div>
+        <div class="info_tip" ng-class=showTip><p>{{textTip}}
+            скопированы в буфер обмена</p>
+        </div>
+        <div ng-show="!showDead"><span clip-copy="joiner(filteredLink.live)" ng-click="tips('live',filteredLink.live.length)" class="clicker">Скопировать все живые</span></div>
         <div class="arrow" ng-show="!showDead">
             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                  x="0px" y="0px"
@@ -157,21 +155,22 @@
 </g>
 </svg>
         </div>
-        <div ng-show="showDead" ng-class="{'del_lable':showDead}"><span clip-copy="joiner(filteredLink.dead)" class="clicker">Скопировать все удаленные</span></div>
+        <div ng-show="showDead" ng-class="{'del_lable':showDead}">
+            <span clip-copy="joiner(filteredLink.dead)" class="clicker" ng-click="tips('dead',filteredLink.dead.length)">Скопировать все удаленные</span></div>
 
 
         <div class="btn_status hidden" ng-show="showSaveMenu()">
             <ul>
-                <li class="copies clicker" clip-copy="joiner(filteredLink.clean,'live')">Скопировать все чистые ссылки
-                    <span>{{filteredLink.clean.length}}</span>
+                <li class="copies clicker" clip-copy="joiner(filteredLink.live)" ng-click="tips('live',filteredLink.live.length)">Скопировать все чистые ссылки
+                    <span>{{filteredLink.live.length}}</span>
                 </li>
-                <li class="copies clicker" clip-copy="joiner(filteredLink.nofollow)">Скопировать все ссылки с nofollow
+                <li class="copies clicker" clip-copy="joiner(filteredLink.nofollow)" ng-click="tips('nfl',filteredLink.nofollow.length)">Скопировать все ссылки с nofollow
                     <span>{{filteredLink.nofollow.length}}</span>
                 </li>
-                <li class="copies clicker" clip-copy="joiner(filteredLink.noindex)">Скопировать все ссылки с noindex
+                <li class="copies clicker" clip-copy="joiner(filteredLink.noindex)" ng-click="tips('nix',filteredLink.noindex.length)"">Скопировать все ссылки с noindex
                     <span>{{filteredLink.noindex.length}}</span>
                 </li>
-                <li class="copies clicker" clip-copy="joiner(filteredLink.redirect)">Скопировать все ссылки с redirect
+                <li class="copies clicker" clip-copy="joiner(filteredLink.redirect)" ng-click="tips('rd',filteredLink.redirect.length)0"">Скопировать все ссылки с redirect
                     <span>{{filteredLink.redirect.length}}</span>
                 </li>
             </ul>
