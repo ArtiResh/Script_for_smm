@@ -67,17 +67,21 @@ $callback = function($document,$url,$code,$target) {
 };
 
 $multi = new dHttp\Client();
+$used_links = array();
 foreach ($params->links as $url) {
     $url = trim($url);
-    $resp_once[] = new dHttp\Client($url, array(
-        CURLOPT_SSL_VERIFYPEER => FALSE,
-        CURLOPT_HEADER => TRUE,
-        CURLOPT_TIMEOUT_MS => 120000,
-        CURLOPT_FOLLOWLOCATION=>TRUE,
-        CURLOPT_IPRESOLVE=>'CURL_IPRESOLVE_V4',
-        CURLOPT_RETURNTRANSFER=>TRUE,
-        CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.2) Gecko/20090729 Firefox/3.5.2 GTB5'
-    ));
+//    if(!in_array($url,$used_links)) {
+        $resp_once[] = new dHttp\Client($url, array(
+            CURLOPT_SSL_VERIFYPEER => FALSE,
+            CURLOPT_HEADER => TRUE,
+            CURLOPT_TIMEOUT_MS => 120000,
+            CURLOPT_FOLLOWLOCATION => TRUE,
+            CURLOPT_IPRESOLVE => 'CURL_IPRESOLVE_V4',
+            CURLOPT_RETURNTRANSFER => TRUE,
+            CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.2) Gecko/20090729 Firefox/3.5.2 GTB5'
+        ));
+        $used_links[] = $url;
+//    }
 }
 
 $response_array = $multi->multi($resp_once);

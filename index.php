@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="en"  ng-app="app">
+<html lang="en" ng-app="app">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
@@ -43,7 +43,8 @@
         <div class="btn_green" ng-class="{'active':canStart}">
             <div><span ng-click="parsedServe('Hard')" class="clicker">Сложная проверка</span></div>
             <div class="arrow">
-                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                      viewBox="0 0 86.001 86.001" style="enable-background:new 0 0 86.001 86.001;" xml:space="preserve">
 <g>
     <path style="fill:#ffffff;" d="M5.907,21.004c-1.352-1.338-3.542-1.338-4.894,0c-1.35,1.336-1.352,3.506,0,4.844l39.54,39.15
@@ -52,25 +53,33 @@
 </g>
 </svg>
             </div>
-            <div class="btn_list hidden" ng-class="{'active':canStart}">
-                <p class="clicker" ng-click="parsedServe('Soft')">Простая проверка (проверяем посты на наличие)</p>
+            <div class="btn_list hidden" ng-show=canStart>
+                <p class="clicker"><span ng-click="parsedServe('Soft')">Простая проверка</span> (проверяем посты на
+                    наличие)</p>
 
-                <p class="clicker" ng-click="parsedServe('Hard')">Сложная проверка (+ проверим nofollow, noindex и redirect)</p>
+                <p class="clicker"><span ng-click="parsedServe('Hard')">Сложная проверка</span> (+ проверим nofollow,
+                    noindex и redirect)</p>
             </div>
         </div>
     </div>
     <div class="out">
         <div class="out_headblock">
-            <p>Результаты проверки <span ng-show="showResult">{{filteredLink.live.length+filteredLink.dead.length}} {{grammaticFormHeader}}</p>
+            <p>Результаты проверки <span ng-show="showResult">{{filteredLink.live.length+filteredLink.dead.length}} {{grammaticFormHeader}}
+            </p>
 
             <p ng-show="showResult">для <a href="{{'http://'+ target_link}}" target="_blank">{{target_link}}</a></p>
         </div>
         <div class="subheader">
-            <a href="javascript:none;" ng-click="checker('showLive')" class="subheader_link" ng-class="{'chosen':showLive}"><span
-                    class="slable">Живые</span>
+            <a href="javascript:none;" ng-click="checker('showLive')" class="subheader_link"
+               ng-class="{'chosen':showLive}">
+                <span class="slable">Живые</span>
+                <span class="headblock_count" ng-if=!(showResult)>0</span>
                 <span class="headblock_count">{{filteredLink.live.length}}</span>
             </a>
-            <a href="javascript:none;" ng-click="checker('showDead')" class="subheader_link del" ng-class="{'chosen':showDead}"><span class="slable">Удаленные</span>
+            <a href="javascript:none;" ng-click="checker('showDead')" class="subheader_link del"
+               ng-class="{'chosen':showDead}">
+                <span class="slable">Удаленные</span>
+                <span class="headblock_count" ng-if=!(showResult)>0</span>
                 <span class="headblock_count">{{filteredLink.dead.length}}</span>
             </a>
         </div>
@@ -120,9 +129,9 @@
                 </div>
                 <div class="shadow"></div>
                 <div ng-show="sofisticatedCheck" class="add_info">
-                    <span ng-if=link.rdcl class="rd">{{link.rd}}</span>
-                    <span ng-if=link.nix class="nix">{{link.nix}}</span>
-                    <span ng-if=link.nfl class="nfl">{{link.nfl}}</span>
+                    <!--                    <span ng-if=link.rdcl class="rd">{{link.rd}}</span>-->
+                    <!--                    <span ng-if=link.nix class="nix">{{link.nix}}</span>-->
+                    <!--                    <span ng-if=link.nfl class="nfl">{{link.nfl}}</span>-->
                 </div>
             </div>
         </div>
@@ -133,10 +142,13 @@
         <a href="javascript:none;" ng-click="showMore()" ng-show="More15" id="next">следующие 20 <span>→</span></a>
     </div>
     <div class="btn_wrapper"></div>
-    <div class="btn_copy" ng-class="{'active':showResult}">
-        <div><span clip-copy="joiner(filteredLink.live)" class="clicker">Скопировать все живые</span></div>
-        <div class="arrow">
-            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    <div class="btn_copy" ng-class="{'active':showResult,'deleted':showDead}">
+        <div class="info_tip" ng-class="slide-top" ng-if="{showTip}"><p>{{textTip}}
+            скопированы в буфер обмена</p></div>
+        <div ng-show="!showDead"><span clip-copy="joiner(filteredLink.live)" class="clicker" >Скопировать все живые</span></div>
+        <div class="arrow" ng-show="!showDead">
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                 x="0px" y="0px"
                  viewBox="0 0 86.001 86.001" style="enable-background:new 0 0 86.001 86.001;" xml:space="preserve">
 <g>
     <path style="fill:#ffffff;" d="M5.907,21.004c-1.352-1.338-3.542-1.338-4.894,0c-1.35,1.336-1.352,3.506,0,4.844l39.54,39.15
@@ -145,7 +157,10 @@
 </g>
 </svg>
         </div>
-        <div class="btn_status hidden" ng-class="{'active':showResult}" ng-show="sofisticatedCheck">
+        <div ng-show="showDead" ng-class="{'del_lable':showDead}"><span clip-copy="joiner(filteredLink.dead)" class="clicker">Скопировать все удаленные</span></div>
+
+
+        <div class="btn_status hidden" ng-show="showSaveMenu()">
             <ul>
                 <li class="copies clicker" clip-copy="joiner(filteredLink.clean)">Скопировать все чистые ссылки
                     <span>{{filteredLink.clean.length}}</span>
@@ -162,7 +177,7 @@
             </ul>
         </div>
     </div>
-    <div class="underscription"  ng-show="showResult">
+    <div class="underscription" ng-show="showResult">
         Или <a href="javascript:none;" ng-click="excel(true)"> cкачать полный отчет </a>в формате Excel
     </div>
 </div>

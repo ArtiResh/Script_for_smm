@@ -17,13 +17,13 @@ app.config(['ngClipProvider', function (ngClipProvider) {
     ngClipProvider.setPath("js/ZeroClipboard.swf");
 }]);
 
-app.config(['$httpProvider', function($httpProvider) {
+app.config(['$httpProvider', function ($httpProvider) {
     $httpProvider.defaults.headers.common['Content-Type'] = 'application/json; charset=utf-8';
     $httpProvider.defaults.headers.common['Accept'] = 'application/json; charset=utf-8';
 }]);
 
 app.controller('MainCtrl', ['$scope', '$filter', '$http', function ($scope, $filter, $http) {
-    $scope.showLive = true;
+    $scope.showLive = false;
     $scope.showDead = false;
     $scope.showResult = false;
     $scope.loading = false;
@@ -40,6 +40,8 @@ app.controller('MainCtrl', ['$scope', '$filter', '$http', function ($scope, $fil
     $scope.filteredLink = {};
     $scope.flinks = '';
     $scope.positions = {start: 1, end: 20, count: 0};
+    $scope.showTip = false;
+    $scope.textTip = '';
 
 
     $scope.checker = function (type) {
@@ -81,12 +83,12 @@ app.controller('MainCtrl', ['$scope', '$filter', '$http', function ($scope, $fil
 
             var template = '<table>' +
                 '<tr><td>Link</td><td>Condition</td><td>Nofollow</td><td>Noindex</td><td>Redirect</td></tr>';
-            $scope.filteredLink.live.forEach(function(entry){
-                template=template+'<tr><td>'+entry.url+'</td><td>'+entry.live+'</td><td>'+entry.nfl+'</td><td>'+entry.nix+'</td><td>'+entry.rd+'</td></tr>';
+            $scope.filteredLink.live.forEach(function (entry) {
+                template = template + '<tr><td>' + entry.url + '</td><td>' + entry.live + '</td><td>' + entry.nfl + '</td><td>' + entry.nix + '</td><td>' + entry.rd + '</td></tr>';
             });
-            $scope.filteredLink.dead.forEach(function(entry){
+            $scope.filteredLink.dead.forEach(function (entry) {
                 entry.live = 'deleted';
-                template=template+'<tr><td>'+entry.url+'</td><td>'+entry.live+'</td><td>'+entry.nfl+'</td><td>'+entry.nix+'</td><td>'+entry.rd+'</td></tr>';
+                template = template + '<tr><td>' + entry.url + '</td><td>' + entry.live + '</td><td>' + entry.nfl + '</td><td>' + entry.nix + '</td><td>' + entry.rd + '</td></tr>';
             });
             window.open('data:application/vnd.ms-excel,' + template);
 
@@ -97,6 +99,7 @@ app.controller('MainCtrl', ['$scope', '$filter', '$http', function ($scope, $fil
         $scope.flinks = flinks;
         $scope.loading = false;
         $scope.showResult = true;
+        $scope.showLive = true;
         $scope.filteredLink.live = $filter('filter')(flinks, {live: true});
         $scope.filteredLink.live.length > 19 ? $scope.More15 = true : '';
         $scope.positions.count = $scope.filteredLink.live.length;
@@ -105,10 +108,10 @@ app.controller('MainCtrl', ['$scope', '$filter', '$http', function ($scope, $fil
         $scope.filteredLink.nofollow = $filter('filter')(flinks, {nfl: 'nf'});
         $scope.filteredLink.noindex = $filter('filter')(flinks, {nix: 'ni'});
         $scope.filteredLink.redirect = $filter('filter')(flinks, {rd: 'rd'});
-        itter=0;
+        itter = 0;
 
-        var gramma = String($scope.filteredLink.live.length+$scope.filteredLink.dead.length);
-        (gramma!='11'&&gramma.substr(gramma.length-1,1)=="1")? $scope.grammaticFormHeader='поста':$scope.grammaticFormHeader='постов';
+        var gramma = String($scope.filteredLink.live.length + $scope.filteredLink.dead.length);
+        (gramma != '11' && gramma.substr(gramma.length - 1, 1) == "1") ? $scope.grammaticFormHeader = 'поста' : $scope.grammaticFormHeader = 'постов';
         $scope.excel($scope.ExcelLoad);
 
     };
@@ -136,6 +139,15 @@ app.controller('MainCtrl', ['$scope', '$filter', '$http', function ($scope, $fil
             result = result + (st_arr[i].url + "\n");
         }
         return result;
+        console.log(st_arr);
+        switch (st_arr) {
+            case  $scope.filteredLink.clean:
+                $scope.showTip = "Живые ссылки на страницы к постам (чистые)";
+        }
+    };
+
+    $scope.showSaveMenu = function () {
+        return !!($scope.showResult && $scope.sofisticatedCheck);
     };
 
     $scope.showMore = function () {

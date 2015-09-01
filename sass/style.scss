@@ -2,7 +2,6 @@
 @import "compass";
 @import "compass/reset";
 
-
 @include font-face(
         "Museo Sans Cyrl 100", font-files(
                 "MuseoSansCyrl_100.woff", woff,
@@ -41,68 +40,37 @@
 }
 
 *::selection {
-  background: #38bea9 ; /* Safari */
+  background: #38bea9; /* Safari */
   color: #FFFFFF;
 }
+
 *::-moz-selection {
-  background: #38bea9 ; /* Firefox */
+  background: #38bea9; /* Firefox */
   color: #FFFFFF;
 }
-%var_active{
-  &.active{
-    background-image: -moz-linear-gradient(bottom, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
-    background-image: -o-linear-gradient(bottom, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
-    background-image: -webkit-linear-gradient(bottom, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
-    background-image: linear-gradient(to top, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
-  }
-}
-%button-gr{
 
-    color: #FFF;
-    font-family: "Museo Sans Cyrl 300";
-    font-size: 1.25vw;
-    width: 17.6vw;
-    height: 3.3vw;
-    background: #31AC99;
-  -moz-border-radius: 0.4vw;
-    -webkit-border-radius: 0.4vw;
-    border-radius: 0.4vw;
-    > div {
-      display: inline-block;
-      display: inline-block;
-      height: 100%;
-      vertical-align: middle;
-      width: 13.5vw;
-      text-align: center;
-      padding: 1.1vw 0 0 0.5vw;
-    }
-    .arrow {
-      border-left: 1px solid rgba(255,255,255,0.2);
-      position: relative;
-      z-index: 8;
-      width: 2.5vw !important;
-      svg{
-        width: 1.2vw;
-        height: 1.2vw;
-      }
-    }
-@extend %var_active;
+%var_non-active {
+  background: #8bdfd2;
 }
 
-%var_flick_span{
-  -webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
-  backface-visibility: hidden;
-  -webkit-perspective: 1000;
-  -webkit-transform: translateZ(0px);
+%var_active_non-hover {
+  background: #31AC99;
 }
 
-%var_border_rad{
+%var_active-hover {
+  background-image: -moz-linear-gradient(bottom, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
+  background-image: -o-linear-gradient(bottom, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
+  background-image: -webkit-linear-gradient(bottom, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
+  background-image: linear-gradient(to top, #01B99F 0%, #02CAAE 100%, #02D5B7 100%, #01B99F 100%);
+}
+
+%var_border_rad {
   -moz-border-radius: 0.4vw;
   -webkit-border-radius: 0.4vw;
   border-radius: 0.4vw;
 }
 
-%var_change_color_btn{
+%var_change_color_btn {
   &:after {
     position: absolute;
     content: '';
@@ -111,7 +79,7 @@
     width: 100%;
     height: 100%;
     @extend %var_border_rad;
-    background: #8bdfd2;
+    @extend %var_active-hover;
     -webkit-transition: opacity 0.4s linear;
     transition: opacity 0.4s linear;
     z-index: 2;
@@ -124,9 +92,51 @@
   }
 }
 
-%soft_decoration{
+%var_flick_span {
+  -webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-transform: translateZ(0px);
+}
+
+%button-gr {
+  position: relative;
+  cursor: pointer;
+  color: #FFF;
+  font-family: "Museo Sans Cyrl 300";
+  font-size: 1.25vw;
+  width: 17.6vw;
+  height: 3.3vw;
+  @extend %var_non-active;
+  &.active {
+    @extend %var_active_non-hover;
+  }
+  @extend %var_border_rad;
+  @extend %var_change_color_btn;
+  @extend %var_flick_span;
+  > div {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    width: 13.5vw;
+    text-align: center;
+    padding: 1.1vw 0 0 0.5vw;
+  }
+  .arrow {
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    z-index: 8;
+    width: 2.5vw !important;
+    svg {
+      width: 1.2vw;
+      height: 1.2vw;
+    }
+  }
+}
+
+%soft_decoration {
   text-decoration: none;
-  border-bottom: 1px solid rgba(0,0,0,0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 %var_slideInDown {
@@ -142,8 +152,6 @@
   padding: 3.6vw 7.75vw 2.25vw;
   width: 12vw;
 }
-
-
 
 .main_wrapper {
   padding: 0 7.75vw 2vw 7.75vw;
@@ -164,13 +172,14 @@
       color: #000;
       font-family: "Museo Sans Cyrl 300";
       font-size: 1.25vw;
-      padding-bottom: 0.7vw;
+      margin-bottom: 0.7vw;
     }
     .input_searchline {
       padding-bottom: 1.8vw;
       div {
+        padding-top: 0.2vw;
         width: 22.3vw;
-        height: 2.2vw;
+        height: 2vw;
         border: 0.1vw solid #38BEA9;
         @extend %var_border_rad;
         color: #CDCDCD;
@@ -183,7 +192,9 @@
           color: #000;
           font-family: "Museo Sans Cyrl 100";
           font-size: 1.1vw;
-          height: 2vw;
+          margin-top: 0.1vw;
+          height: 1.5vw;
+          width: 18.5vw;
           &:focus {
             outline: none;
           }
@@ -242,38 +253,44 @@
       }
     }
     .btn_green {
-      position: relative;
       @extend %button-gr;
-      @extend %var_change_color_btn;
-      cursor: pointer;
-      .btn_list{
+      .arrow {
+        left: -0.3vw;
+      }
+      .btn_list {
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 10;
+        z-index: 15;
         width: 32.8vw;
         height: 4.4vw;
         text-align: left;
-        background: #31AC99;
         @extend %var_border_rad;
         color: #FFF;
         font-family: "Museo Sans Cyrl 100";
         display: none;
         font-size: 1.12vw;
-        @extend %var_change_color_btn;
+        @extend %var_active-hover;
         @extend %var_slideInDown;
-        @extend %var_active;
-        p{
+        cursor: default;
+        p {
           margin-left: 0.6vw;
           padding: 0.2vw 0 0.5vw;
-          cursor: pointer;
+          span {
+            cursor: pointer;
+            font-family: "Museo Sans Cyrl 300";
+            border-bottom: 1px dotted rgba(255, 255, 255, 0.6);
+            &:hover{
+              border-bottom: none;
+            }
+          }
         }
       }
     }
   }
 
   .out {
-    margin-right: 1.7vw;
+    margin: 0 1.7vw 0.1vw 0;
     float: right;
     .out_headblock {
       color: #000;
@@ -281,7 +298,7 @@
       font-size: 1.9vw;
       padding-bottom: 1.6vw;
       height: 3.8vw;
-      a{
+      a {
         color: #000;
         text-decoration: none;
         @extend %soft_decoration;
@@ -313,7 +330,7 @@
           }
         }
       }
-      .del{
+      .del {
         width: 10vw;
       }
     }
@@ -322,8 +339,8 @@
       width: 42.5vw;
       height: 36vw;
       position: relative;
-      z-index:4;
-      .loader{
+      z-index: 4;
+      .loader {
         width: 6vw;
         height: 6vw;
         position: absolute;
@@ -332,8 +349,8 @@
         left: 13vw;
       }
       .el_list_link {
-        margin-top: 0.6vw;
-        >div{
+        margin-top: 0.56vw;
+        > div {
           display: inline-block;
           vertical-align: middle;
         }
@@ -350,42 +367,42 @@
           overflow-x: hidden;
           width: 33vw;
           height: 1.2vw;
-          div{
+          div {
             overflow: hidden;
           }
           a {
             text-decoration: none;
             position: absolute;
-            width: 100vw;
+            white-space: nowrap;
             color: #000;
             font-family: "Museo Sans Cyrl 300";
             font-size: 1.1vw;
-            p{
+            p {
               @extend %soft_decoration;
               position: absolute;
             }
           }
         }
-        .shadow{
+        .shadow {
           position: relative;
           margin-left: 0.3vw;
           width: 1.5vw;
           height: 1.2vw;
           box-shadow: -1.3vw 0 1.2vw 0.3vw #fff;
         }
-        .add_info{
+        .add_info {
           margin-left: 0.4vw;
           height: 1vw;
-         span{
-           position: relative;
-           color: #38BEA9;
-           font-family: "Museo Sans Cyrl 100";
-           font-size: 0.9vw;
-           text-transform: uppercase;
-           padding-right: 0.3vw;
-           cursor: pointer;
-            &:after{
-              display: block;
+          span {
+            position: relative;
+            color: #38BEA9;
+            font-family: "Museo Sans Cyrl 100";
+            font-size: 0.9vw;
+            text-transform: uppercase;
+            padding-right: 0.3vw;
+            cursor: pointer;
+            &:after {
+              display: none;
               text-align: center;
               opacity: 0;
               text-transform: none;
@@ -393,50 +410,56 @@
               width: 8.5vw;
               height: 1.5vw;
               position: absolute;
-              top: 1vw;
-              left: 1vw;
+              top: -1.7vw;
+              left: -4vw;
+              background-color: rgba(173, 173, 173, 0.2);
+              border-radius: 0.4vw;
             }
-            &:hover:after{
-              opacity: 1;
+            &:hover:after {
+              display:block;
+              opacity: 0.9;
             }
           }
-          .rd:after{
-            content:"Ссылка с редиректом";
+          .rd:after {
+            content: "Ссылка с редиректом";
+            padding: 0.4vw;
+            height: 0.8vw;
+            top: -2vw;
           }
-          .nix:after{
-            content:"Ссылка с аттрибутом noindex";
+          .nix:after {
+            content: "Ссылка с аттрибутом noindex";
           }
-          .nfl:after{
-            content:"Ссылка с аттрибутом nofollow";
+          .nfl:after {
+            content: "Ссылка с аттрибутом nofollow";
           }
         }
       }
     }
   }
-  .next_prev{
+  .next_prev {
     z-index: 3;
     position: relative;
     width: 37vw;
     margin-top: 0.5vw;
     margin-left: 6.5vw;
     height: 3vw;
-    a{
+    a {
       position: absolute;
       color: #000;
       font-size: 1.1vw;
       text-decoration: none;
       font-weight: 400;
       font-family: "Museo Sans Cyrl 300";
-      border-bottom: 1px dashed rgba(0,0,0,0.2);
-      span{
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+      span {
         font-family: "Minion Pro Regular";
       }
     }
-    #next{
+    #next {
       left: 25.3vw;
     }
   }
-  .btn_wrapper{
+  .btn_wrapper {
     position: absolute;
     background: #ffffff;
     width: 35vw;
@@ -445,7 +468,7 @@
     left: 46vw;
     top: 50vw;
   }
-  .btn_copy{
+  .btn_copy {
     position: relative;
     @extend %button-gr;
     @extend %var_change_color_btn;
@@ -453,10 +476,33 @@
     width: 21.5vw;
     cursor: pointer;
     z-index: 3;
-    >div{
+    > div {
       width: 17vw;
     }
-    .btn_status{
+    .info_tip{
+      position: absolute;
+      top: -7.5vw;
+      left: 0;
+      color: #FFF;
+      font-family: "Museo Sans Cyrl 300";
+      font-size: 1.1vw;
+      line-height: 1.5vw;
+      opacity: 0.85;
+      width: 28.8vw;
+      height: 4vw;
+      background-color: #000;
+      @extend %var_border_rad;
+      p{
+        opacity: 1;
+      }
+    }
+    &.deleted{
+      width: 20.5vw;
+      .del_lable{
+        width: 19.5vw;
+      }
+    }
+    .btn_status {
       position: absolute;
       z-index: 10;
       color: #FFF;
@@ -464,21 +510,20 @@
       font-size: 1.12vw;
       width: 23.5vw;
       height: 8.4vw;
-      top:0;
+      top: 0;
       left: 0;
-      background: #31AC99;
-      @extend %var_active;
+      @extend %var_active-hover;
       @extend %var_border_rad;
       text-align: left;
       display: none;
-      ul{
+      ul {
         list-style: none;
         padding: 0.3vw 0 0 1.2vw;
-        li{
+        li {
           padding-bottom: 0.7vw;
           width: 100%;
           cursor: pointer;
-          span{
+          span {
             float: right;
             margin-right: 2.1vw;
             text-align: left;
@@ -488,22 +533,22 @@
           }
         }
       }
-      @extend %var_change_color_btn;
+      //@extend %var_change_color_btn;
       @extend %var_slideInDown;
     }
 
   }
 
-  .underscription{
+  .underscription {
     color: #000;
     font-family: "Museo Sans Cyrl 300";
     font-size: 0.92vw;
     margin: 2vw 0 0 7vw;
     float: right;
-    z-index: 4;
+    z-index: 2;
     position: relative;
     left: -1.3vw;
-    a{
+    a {
       color: #000;
       @extend %soft_decoration;
     }
@@ -517,30 +562,30 @@ footer {
   color: #696969;
   font-family: "Museo Sans Cyrl 100";
   font-size: 1.1vw;
-  >div{
+  > div {
     display: inline-block;
-    a{
+    a {
       color: #696969;
       @extend %soft_decoration;
       height: 1.5vw;
     }
-    p{
+    p {
       height: 1.6vw;
     }
   }
-  .for{
+  .for {
     float: right;
     text-align: right;
   }
 }
-.clicker{
+
+.clicker {
   position: relative;
   z-index: 8;
 }
 
 .animate-enter,
-.animate-leave
-{
+.animate-leave {
   -webkit-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
   -moz-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
   -ms-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
@@ -563,3 +608,86 @@ footer {
   }
 }
 
+/* ------------------------------------------- */
+/* Slide Top
+/* ------------------------------------------- */
+/* line 109, ../sass/ng-animation.scss */
+.slide-top {
+  -webkit-transition: all 0 cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition: all 0 cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -ms-transition: all 0 cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -o-transition: all 0 cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0 cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  /* easeOutQuad */
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -ms-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -o-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  /* easeOutQuad */
+}
+/* line 111, ../sass/ng-animation.scss */
+.slide-top.ng-enter {
+  transform: translateY(60px);
+  -ms-transform: translateY(60px);
+  -webkit-transform: translateY(60px);
+  transition-duration: 250ms;
+  -webkit-transition-duration: 250ms;
+  opacity: 0;
+}
+/* line 117, ../sass/ng-animation.scss */
+.slide-top.ng-enter-active {
+  transform: translateY(0);
+  -ms-transform: translateY(0);
+  -webkit-transform: translateY(0);
+  opacity: 1;
+}
+/* line 122, ../sass/ng-animation.scss */
+.slide-top.ng-leave {
+  transform: translateY(0);
+  -ms-transform: translateY(0);
+  -webkit-transform: translateY(0);
+  transition-duration: 250ms;
+  -webkit-transition-duration: 250ms;
+  opacity: 1;
+}
+/* line 128, ../sass/ng-animation.scss */
+.slide-top.ng-leave-active {
+  transform: translateY(60px);
+  -ms-transform: translateY(60px);
+  -webkit-transform: translateY(60px);
+  opacity: 0;
+}
+/* line 134, ../sass/ng-animation.scss */
+.slide-top.ng-hide-add {
+  transform: translateY(0);
+  -ms-transform: translateY(0);
+  -webkit-transform: translateY(0);
+  transition-duration: 250ms;
+  -webkit-transition-duration: 250ms;
+  opacity: 1;
+}
+/* line 139, ../sass/ng-animation.scss */
+.slide-top.ng-hide-add.ng-hide-add-active {
+  transform: translateY(60px);
+  -ms-transform: translateY(60px);
+  -webkit-transform: translateY(60px);
+  opacity: 0;
+}
+/* line 145, ../sass/ng-animation.scss */
+.slide-top.ng-hide-remove {
+  transform: translateY(60px);
+  -ms-transform: translateY(60px);
+  -webkit-transform: translateY(60px);
+  transition-duration: 250ms;
+  -webkit-transition-duration: 250ms;
+  display: block !important;
+  opacity: 0;
+}
+/* line 151, ../sass/ng-animation.scss */
+.slide-top.ng-hide-remove.ng-hide-remove-active {
+  transform: translateY(0);
+  -ms-transform: translateY(0);
+  -webkit-transform: translateY(0);
+  opacity: 1;
+}
