@@ -438,13 +438,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 355, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link {
   margin-top: 0.56vw;
+  height: 1.25vw;
 }
-/* line 357, ../sass/style.scss */
+/* line 358, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link > div {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 361, ../sass/style.scss */
+/* line 362, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .number {
   color: #CDCDCD;
   font-family: "Museo Sans Cyrl 100";
@@ -453,18 +454,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   text-align: center;
   margin-left: -1vw;
 }
-/* line 369, ../sass/style.scss */
+/* line 370, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .link {
   position: relative;
   overflow-x: hidden;
   width: 33vw;
   height: 1.2vw;
 }
-/* line 374, ../sass/style.scss */
+/* line 375, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .link div {
   overflow: hidden;
 }
-/* line 377, ../sass/style.scss */
+/* line 378, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .link a {
   text-decoration: none;
   position: absolute;
@@ -473,11 +474,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-family: "Museo Sans Cyrl 300";
   font-size: 1.1vw;
 }
-/* line 384, ../sass/style.scss */
+/* line 385, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .link a p {
   position: absolute;
 }
-/* line 390, ../sass/style.scss */
+/* line 391, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .shadow {
   position: relative;
   margin-left: 0.3vw;
@@ -485,12 +486,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: 1.2vw;
   box-shadow: -1.3vw 0 1.2vw 0.3vw #fff;
 }
-/* line 397, ../sass/style.scss */
+/* line 398, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .add_info {
   margin-left: 0.4vw;
   height: 1vw;
 }
-/* line 400, ../sass/style.scss */
+/* line 401, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .add_info span {
   position: relative;
   color: #38BEA9;
@@ -500,7 +501,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   padding-right: 0.3vw;
   cursor: pointer;
 }
-/* line 408, ../sass/style.scss */
+/* line 409, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .add_info span:after {
   display: none;
   text-align: center;
@@ -515,27 +516,27 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   background-color: rgba(173, 173, 173, 0.2);
   border-radius: 0.4vw;
 }
-/* line 422, ../sass/style.scss */
+/* line 423, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .add_info span:hover:after {
   display: block;
   opacity: 0.9;
 }
-/* line 427, ../sass/style.scss */
+/* line 428, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .add_info .rd:after {
   content: "Ссылка с редиректом";
   padding: 0.4vw;
   height: 0.8vw;
   top: -2vw;
 }
-/* line 433, ../sass/style.scss */
+/* line 434, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .add_info .nix:after {
   content: "Ссылка с аттрибутом noindex";
 }
-/* line 436, ../sass/style.scss */
+/* line 437, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .add_info .nfl:after {
   content: "Ссылка с аттрибутом nofollow";
 }
-/* line 443, ../sass/style.scss */
+/* line 444, ../sass/style.scss */
 .main_wrapper .next_prev {
   z-index: 3;
   position: relative;
@@ -544,7 +545,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin-left: 6.5vw;
   height: 3vw;
 }
-/* line 450, ../sass/style.scss */
+/* line 451, ../sass/style.scss */
 .main_wrapper .next_prev a {
   position: absolute;
   color: #000;
@@ -554,15 +555,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-family: "Museo Sans Cyrl 300";
   border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
 }
-/* line 458, ../sass/style.scss */
+/* line 459, ../sass/style.scss */
 .main_wrapper .next_prev a span {
   font-family: "Minion Pro Regular";
 }
-/* line 462, ../sass/style.scss */
+/* line 463, ../sass/style.scss */
 .main_wrapper .next_prev #next {
   left: 25.3vw;
 }
-/* line 466, ../sass/style.scss */
+/* line 467, ../sass/style.scss */
 .main_wrapper .btn_wrapper {
   position: absolute;
   background: #ffffff;
@@ -572,7 +573,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   left: 46vw;
   top: 50vw;
 }
-/* line 475, ../sass/style.scss */
+/* line 476, ../sass/style.scss */
 .main_wrapper .btn_copy {
   position: relative;
   margin-left: 7vw;
@@ -580,11 +581,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   cursor: pointer;
   z-index: 3;
 }
-/* line 483, ../sass/style.scss */
+/* line 484, ../sass/style.scss */
 .main_wrapper .btn_copy > div {
   width: 17vw;
 }
-/* line 486, ../sass/style.scss */
+/* line 487, ../sass/style.scss */
 .main_wrapper .btn_copy .info_tip {
   position: absolute;
   opacity: 0;
@@ -598,7 +599,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: 4vw;
   background-color: #000;
 }
-/* line 499, ../sass/style.scss */
+/* line 500, ../sass/style.scss */
 .main_wrapper .btn_copy .info_tip.slide-top {
   -webkit-transition: all 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -moz-transition: all 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -614,7 +615,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   opacity: 1;
   /* easeOutQuad */
 }
-/* line 514, ../sass/style.scss */
+/* line 515, ../sass/style.scss */
 .main_wrapper .btn_copy .info_tip.slide-bottom {
   -webkit-transition: all 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -moz-transition: all 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -630,19 +631,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   opacity: 0;
   /* easeOutQuad */
 }
-/* line 529, ../sass/style.scss */
+/* line 530, ../sass/style.scss */
 .main_wrapper .btn_copy .info_tip p {
   opacity: 1;
 }
-/* line 533, ../sass/style.scss */
+/* line 534, ../sass/style.scss */
 .main_wrapper .btn_copy.deleted {
   width: 20.5vw;
 }
-/* line 535, ../sass/style.scss */
+/* line 536, ../sass/style.scss */
 .main_wrapper .btn_copy.deleted .del_lable {
   width: 19.5vw;
 }
-/* line 539, ../sass/style.scss */
+/* line 540, ../sass/style.scss */
 .main_wrapper .btn_copy .btn_status {
   position: absolute;
   z-index: 10;
@@ -656,18 +657,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   text-align: left;
   display: none;
 }
-/* line 553, ../sass/style.scss */
+/* line 554, ../sass/style.scss */
 .main_wrapper .btn_copy .btn_status ul {
   list-style: none;
   padding: 0.3vw 0 0 1.2vw;
 }
-/* line 556, ../sass/style.scss */
+/* line 557, ../sass/style.scss */
 .main_wrapper .btn_copy .btn_status ul li {
   padding-bottom: 0.7vw;
   width: 100%;
   cursor: pointer;
 }
-/* line 560, ../sass/style.scss */
+/* line 561, ../sass/style.scss */
 .main_wrapper .btn_copy .btn_status ul li span {
   float: right;
   margin-right: 2.1vw;
@@ -676,7 +677,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-size: 0.9vw;
   margin-top: 0.1vw;
 }
-/* line 576, ../sass/style.scss */
+/* line 577, ../sass/style.scss */
 .main_wrapper .underscription {
   color: #000;
   font-family: "Museo Sans Cyrl 300";
@@ -687,12 +688,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   position: relative;
   left: -1.3vw;
 }
-/* line 585, ../sass/style.scss */
+/* line 586, ../sass/style.scss */
 .main_wrapper .underscription a {
   color: #000;
 }
 
-/* line 592, ../sass/style.scss */
+/* line 593, ../sass/style.scss */
 footer {
   height: 5vw;
   padding: 0.5vw 5.75vw 3vw 7.75vw;
@@ -701,26 +702,26 @@ footer {
   font-family: "Museo Sans Cyrl 100";
   font-size: 1.1vw;
 }
-/* line 599, ../sass/style.scss */
+/* line 600, ../sass/style.scss */
 footer > div {
   display: inline-block;
 }
-/* line 601, ../sass/style.scss */
+/* line 602, ../sass/style.scss */
 footer > div a {
   color: #696969;
   height: 1.5vw;
 }
-/* line 606, ../sass/style.scss */
+/* line 607, ../sass/style.scss */
 footer > div p {
   height: 1.6vw;
 }
-/* line 610, ../sass/style.scss */
+/* line 611, ../sass/style.scss */
 footer .for {
   float: right;
   text-align: right;
 }
 
-/* line 616, ../sass/style.scss */
+/* line 617, ../sass/style.scss */
 .clicker {
   position: relative;
   z-index: 8;
