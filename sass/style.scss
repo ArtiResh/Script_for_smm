@@ -191,6 +191,9 @@
         font-size: 1.1vw;
         vertical-align: middle;
         padding-left: 0.6vw;
+        span{
+          text-align: right;
+        }
         input {
           border: none;
           color: #000;
@@ -228,7 +231,7 @@
       }
     }
     .in_excel {
-      padding: 1.2vw 0 1.95vw;
+      padding: 1.2vw 0 1.9vw;
       position: relative;
       input[type="checkbox"] {
         display: none;
