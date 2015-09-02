@@ -88,7 +88,7 @@ $multi = new dHttp\Client();
 $used_links = array();
 foreach ($params->links as $url) {
     $url = trim($url);
-//    if(!in_array($url,$used_links)) {
+    if(!in_array($url,$used_links)) {
         $resp_once[] = new dHttp\Client($url, array(
             CURLOPT_SSL_VERIFYPEER => FALSE,
             CURLOPT_HEADER => TRUE,
@@ -99,7 +99,7 @@ foreach ($params->links as $url) {
             CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.2) Gecko/20090729 Firefox/3.5.2 GTB5'
         ));
         $used_links[] = $url;
-//    }
+    }
 }
 
 $response_array = $multi->multi($resp_once);

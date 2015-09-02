@@ -184,7 +184,7 @@
         padding-top: 0.2vw;
         width: 22.3vw;
         height: 2vw;
-        border: 0.1vw solid #38BEA9;
+        border: 1px solid #38BEA9;
         @extend %var_border_rad;
         color: #CDCDCD;
         font-family: "Museo Sans Cyrl 100";
@@ -231,7 +231,7 @@
       }
     }
     .in_excel {
-      padding: 1.2vw 0 1.9vw;
+      padding: 1.2vw 0 1.75vw;
       position: relative;
       input[type="checkbox"] {
         display: none;

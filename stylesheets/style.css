@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* line 5, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -21,64 +21,64 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
 @font-face {
   font-family: "Museo Sans Cyrl 100";
-  src: url('../fonts/MuseoSansCyrl_100.woff?1440750480') format('woff'), url('../fonts/MuseoSansCyrl_100.otf?1440750480') format('opentype'), url('../fonts/MuseoSansCyrl_100.ttf?1440750480') format('truetype');
+  src: url('../fonts/MuseoSansCyrl_100.woff?1440710851') format('woff'), url('../fonts/MuseoSansCyrl_100.otf?1440187991') format('opentype'), url('../fonts/MuseoSansCyrl_100.ttf?1440710850') format('truetype');
 }
 @font-face {
   font-family: "Museo Sans Cyrl 300";
-  src: url('../fonts/MuseoSansCyrl_300.woff?1440750480') format('woff'), url('../fonts/MuseoSansCyrl_300.otf?1440750480') format('opentype'), url('../fonts/MuseoSansCyrl_300.ttf?1440750480') format('truetype');
+  src: url('../fonts/MuseoSansCyrl_300.woff?1440710857') format('woff'), url('../fonts/MuseoSansCyrl_300.otf?1440187991') format('opentype'), url('../fonts/MuseoSansCyrl_300.ttf?1440710857') format('truetype');
 }
 @font-face {
   font-family: "Museo Sans Cyrl 500";
-  src: url('../fonts/MuseoSansCyrl_300.woff?1440750480') format('woff'), url('../fonts/MuseoSansCyrl_300.otf?1440750480') format('opentype'), url('../fonts/MuseoSansCyrl_300.ttf?1440750480') format('truetype');
+  src: url('../fonts/MuseoSansCyrl_300.woff?1440710857') format('woff'), url('../fonts/MuseoSansCyrl_300.otf?1440187991') format('opentype'), url('../fonts/MuseoSansCyrl_300.ttf?1440710857') format('truetype');
 }
 @font-face {
   font-family: "Minion Pro Regular";
-  src: url('../fonts/MinionPro-Regular.woff?1440757172') format('woff'), url('../fonts/MinionPro-Regular.otf?1265284842') format('opentype'), url('../fonts/MinionPro-Regular.ttf?1440757172') format('truetype');
+  src: url('../fonts/MinionPro-Regular.woff?1440793049') format('woff'), url('../fonts/MinionPro-Regular.otf?1440793049') format('opentype'), url('../fonts/MinionPro-Regular.ttf?1440793049') format('truetype');
 }
 @keyframes slideInDown {
   from {
@@ -254,7 +254,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   padding-top: 0.2vw;
   width: 22.3vw;
   height: 2vw;
-  border: 0.1vw solid #38BEA9;
+  border: 1px solid #38BEA9;
   color: #CDCDCD;
   font-family: "Museo Sans Cyrl 100";
   font-size: 1.1vw;
@@ -303,7 +303,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 /* line 233, ../sass/style.scss */
 .main_wrapper .in .in_excel {
-  padding: 1.2vw 0 1.9vw;
+  padding: 1.2vw 0 1.75vw;
   position: relative;
 }
 /* line 236, ../sass/style.scss */
