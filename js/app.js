@@ -42,6 +42,7 @@ app.controller('MainCtrl', ['$scope', '$filter', '$http', '$timeout', function (
     $scope.positions = {start: 1, end: 20, count: 0};
     $scope.showTip = false;
     $scope.textTip = '';
+    $scope.typeOfCheck = "Сложная";
 
 
     $scope.checker = function (type) {
@@ -118,7 +119,16 @@ app.controller('MainCtrl', ['$scope', '$filter', '$http', '$timeout', function (
     $scope.parsedServe = function (type) {
         if ($scope.canStart) {
             var links = $scope.list_links.split(/\n/);
-            type === "Soft" ? $scope.sofisticatedCheck = false : $scope.sofisticatedCheck = true;
+            if(type === false)
+            {
+                $scope.sofisticatedCheck = false;
+                $scope.typeOfCheck = 'Простая'}
+            else
+            {
+                $scope.sofisticatedCheck = true;
+                $scope.typeOfCheck = 'Сложная'
+            }
+
             $scope.loading = true;
             $scope.filteredLink = {};
             $scope.More15 = false;
@@ -153,7 +163,7 @@ app.controller('MainCtrl', ['$scope', '$filter', '$http', '$timeout', function (
             $scope.showTip = "slide-top";
             $timeout(function () {
                 $scope.showTip = "slide-bottom";
-            }, 5000);
+            }, 2000);
         }
     };
 

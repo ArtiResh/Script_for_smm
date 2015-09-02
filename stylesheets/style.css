@@ -622,11 +622,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 /* line 519, ../sass/style.scss */
 .main_wrapper .btn_copy .info_tip.slide-top {
-  -webkit-transition: all 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -moz-transition: all 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -ms-transition: all 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -o-transition: all 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition: all 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -webkit-transition: all 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition: all 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -ms-transition: all 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -o-transition: all 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   /* easeOutQuad */
   -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -moz-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -638,11 +638,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 /* line 534, ../sass/style.scss */
 .main_wrapper .btn_copy .info_tip.slide-bottom {
-  -webkit-transition: all 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -moz-transition: all 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -ms-transition: all 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -o-transition: all 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition: all 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -webkit-transition: all 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition: all 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -ms-transition: all 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -o-transition: all 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   /* easeOutQuad */
   -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -moz-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);

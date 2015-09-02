@@ -41,7 +41,7 @@
         </span>
         </div>
         <div class="btn_green" ng-class="{'active':canStart}">
-            <div><span ng-click="parsedServe('Hard')" class="clicker">Сложная проверка</span></div>
+            <div><span ng-click="parsedServe(sofisticatedCheck)" class="clicker">{{typeOfCheck}} проверка</span></div>
             <div class="arrow">
                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -54,10 +54,10 @@
 </svg>
             </div>
             <div class="btn_list hidden" ng-show=canStart>
-                <p class="clicker"><span ng-click="parsedServe('Soft')">Простая проверка</span> (проверяем посты на
+                <p class="clicker"><span ng-click="parsedServe(false)">Простая проверка</span> (проверяем посты на
                     наличие)</p>
 
-                <p class="clicker"><span ng-click="parsedServe('Hard')">Сложная проверка</span> (+ проверим nofollow,
+                <p class="clicker"><span ng-click="parsedServe(true)">Сложная проверка</span> (+ проверим nofollow,
                     noindex и redirect)</p>
             </div>
         </div>
