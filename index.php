@@ -167,10 +167,10 @@
                 <li class="copies clicker" clip-copy="joiner(filteredLink.nofollow)" ng-click="tips('nfl',filteredLink.nofollow.length)">Скопировать все ссылки с nofollow
                     <span>{{filteredLink.nofollow.length}}</span>
                 </li>
-                <li class="copies clicker" clip-copy="joiner(filteredLink.noindex)" ng-click="tips('nix',filteredLink.noindex.length)"">Скопировать все ссылки с noindex
+                <li class="copies clicker" clip-copy="joiner(filteredLink.noindex)" ng-click="tips('nix',filteredLink.noindex.length)">Скопировать все ссылки с noindex
                     <span>{{filteredLink.noindex.length}}</span>
                 </li>
-                <li class="copies clicker" clip-copy="joiner(filteredLink.redirect)" ng-click="tips('rd',filteredLink.redirect.length)0"">Скопировать все ссылки с redirect
+                <li class="copies clicker" clip-copy="joiner(filteredLink.redirect)" ng-click="tips('rd',filteredLink.redirect.length)">Скопировать все ссылки с redirect
                     <span>{{filteredLink.redirect.length}}</span>
                 </li>
             </ul>

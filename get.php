@@ -40,15 +40,33 @@ $callback = function($document,$url,$code,$target) {
 
         if (count($data->find('a'))) {
             $hook = false;
+            $hashed = false;
             foreach ($data->find('a') as $a) {
-
+                $hashed = false;
                 if (stripos($a->href, $target)) {
                     stripos($a->href, $target) > 12 ? $local_result['rd'] = 'rd' : $local_result['rd'] = '';
                     $a->rel != "nofollow" && !($local_result['nfl']==='nf') ? $local_result['nfl'] = '' : $local_result['nfl'] = 'nf';
                     $hook = true;
                 }
+                else{
+                    $hashed = true;
+                }
+                if(stripos($a->innertext, $target)&&($hashed))
+                {
+                    $a->rel != "nofollow" && !($local_result['nfl']==='nf') ? $local_result['nfl'] = '' : $local_result['nfl'] = 'nf';
+                    $local_result['rd'] = 'rd';
+                    $hook = true;
+                }
             }
             $hook?$local_result['live'] = true:$local_result['live'] = false;
+        }
+        if(count($data->find('span'))){
+            foreach ($data->find('span') as $span) {
+                if (stripos($span->onclick, $target)) {
+                    $local_result['rd'] = 'rd';
+                    $local_result['live'] = true;
+                }
+            }
         }
         if (count($data->find('noindex'))){
             foreach ($data->find('noindex') as $noindex) {
