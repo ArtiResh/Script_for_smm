@@ -101,7 +101,7 @@ app.controller('MainCtrl', ['$scope', '$filter', '$http', '$timeout', function (
         $scope.showResult = true;
         $scope.showLive = true;
         $scope.filteredLink.live = $filter('filter')(flinks, {live: true});
-        $scope.filteredLink.live.length > 19 ? $scope.More15 = true : '';
+        $scope.filteredLink.live.length > 20 ? $scope.More15 = true : '';
         $scope.positions.count = $scope.filteredLink.live.length;
         $scope.filteredLink.dead = $filter('filter')(flinks, {live: false});
         $scope.filteredLink.nofollow = $filter('filter')(flinks, {nfl: 'nf'});
@@ -157,9 +157,6 @@ app.controller('MainCtrl', ['$scope', '$filter', '$http', '$timeout', function (
         }
     };
 
-    $scope.showDescription = function(){
-        console.log("!!");
-    };
 
     $scope.joiner = function (st_arr) {
         var result = '';
@@ -199,20 +196,6 @@ $(document).ready(function () {
     });
     $('.btn_wrapper').mouseenter(function () {
         $('.btn_status.hidden').removeClass('slideInDown');
-    });
-
-    $(".span").mouseenter(function(){
-        clearTimeout(tipTimeout);
-        $(".showed_tip").animate({opacity:0},800,function(){
-            $(this).css({visibility: "hidden"}).removeClass("showed_tip");
-        });
-        $(this).find(".tspan").css({visibility: "visible"}).addClass("showed_tip").animate({opacity:0.95},800,function(){
-            tipTimeout = setTimeout(function(){
-                $(".showed_tip").css({visibility: "hidden"}).animate({opacity:0},800,function(){
-                    $(this).removeClass("showed_tip");
-                });
-            },5000);
-        });
     });
     //$('#copy_live').click(function(){
     //   alert('nflfv');
