@@ -142,9 +142,11 @@
 %var_slideInDown {
   &.slideInDown {
     display: block;
-    animation-name: slideInDown;
-    -webkit-transition: all 2s; /* Safari */
-    transition: all 2s;
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    //animation-name: slideInDown;
+    -webkit-transition: all 10s; /* Safari */
+    transition: all 10s;
   }
 }
 
@@ -277,6 +279,8 @@
         font-family: "Museo Sans Cyrl 100";
         display: none;
         font-size: 1.12vw;
+        opacity: 0;
+        //transform: translate3d(0, -100%, 0);
         @extend %var_active-hover;
         @extend %var_slideInDown;
         cursor: default;
@@ -401,32 +405,66 @@
         .add_info {
           margin-left: 0.4vw;
           height: 1vw;
-          span {
+          .span {
             position: relative;
+            display: inline-block;
             color: #38BEA9;
             font-family: "Museo Sans Cyrl 100";
             font-size: 0.9vw;
             text-transform: uppercase;
             padding-right: 0.3vw;
             cursor: pointer;
-            &:after {
-              display: none;
-              text-align: center;
-              opacity: 0;
-              text-transform: none;
-              font-size: 0.7vw;
-              width: 8.5vw;
-              height: 1.5vw;
+            .tspan {
+
+              visibility: hidden;
               position: absolute;
-              top: -1.7vw;
-              left: -4vw;
-              background-color: rgba(173, 173, 173, 0.2);
-              border-radius: 0.4vw;
+              bottom: 2.5vw;
+              left: 50%;
+              z-index: 999;
+              width: 15vw;
+              margin-left: -10vw;
+              padding: 1vw;
+              opacity: 0;
+              line-height: 1.1vw;
+              background-color: #000000;
+              font-family: "Museo Sans Cyrl 100";
+              font-size: 1.1vw;
+              font-weight: 300;
+              color: #363636;
+              @extend %var_border_rad;
+
+              &:before
+              {
+                content: "";
+                position: absolute;
+                z-index: 1000;
+                bottom: -0.4vw;
+                left: 50%;
+                margin-left: -0.5vw;
+                border-top: 0.5vw solid  #FFFFFF;
+                border-left: 0.5vw solid transparent;
+                border-right: 0.5vw solid transparent;
+                border-bottom: 0;
+              }
             }
-            &:hover:after {
-              display:block;
-              opacity: 0.9;
-            }
+            //&:after {
+            //  display: none;
+            //  text-align: center;
+            //  opacity: 0;
+            //  text-transform: none;
+            //  font-size: 0.7vw;
+            //  width: 8.5vw;
+            //  height: 1.5vw;
+            //  position: absolute;
+            //  top: -1.7vw;
+            //  left: -4vw;
+            //  background-color: rgba(173, 173, 173, 0.2);
+            //  border-radius: 0.4vw;
+            //}
+            //&:hover:after {
+            //  display:block;
+            //  opacity: 0.9;
+            //}
           }
           .rd:after {
             content: "Ссылка с редиректом";
@@ -471,10 +509,10 @@
     position: absolute;
     background: #ffffff;
     width: 35vw;
-    height: 18vw;
+    height: 26vw;
     z-index: 2;
     left: 46vw;
-    top: 50vw;
+    top: 41vw;
   }
   .btn_copy {
     position: relative;
@@ -490,7 +528,7 @@
     .info_tip{
       position: absolute;
       opacity: 0;
-      top: -7.5vw;
+      top: -13vw;
       left: 0;
       color: #FFF;
       font-family: "Museo Sans Cyrl 300";
@@ -550,6 +588,8 @@
       height: 8.4vw;
       top: 0;
       left: 0;
+      opacity: 0;
+      //transform: translate3d(0, -100%, 0);
       @extend %var_active-hover;
       @extend %var_border_rad;
       text-align: left;
