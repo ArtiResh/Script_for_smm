@@ -610,8 +610,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .main_wrapper .btn_copy .info_tip {
   position: absolute;
   opacity: 0;
-  top: -7.5vw;
-  left: 0;
+  top: -23.8vw;
+  left: 2.3vw;
   color: #FFF;
   font-family: "Museo Sans Cyrl 300";
   font-size: 1.1vw;
