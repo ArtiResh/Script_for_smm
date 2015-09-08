@@ -18,17 +18,18 @@ $callback = function ($document, $url, $code, $target) {
     $local_result['rd'] = '';
     $local_result['clear'] = false;
     if($code === 200) {
-        $tags = get_meta_tags($url);
-
-        foreach ($tags as $tag) {
-            $tag = explode(',',$tag);
-            foreach ($tag as $t){
-                $t = trim(mb_strtolower($t));
-                $t == "nofollow" ? $local_result['nfl'] = 'nf' : '';
-                $t == "noindex" ? $local_result['nix'] = 'ni' : '';
+        if($tags = @get_meta_tags($url)){
+            if(count($tags)) {
+                foreach ($tags as $tag) {
+                    $tag = explode(',', $tag);
+                    foreach ($tag as $t) {
+                        $t = trim(mb_strtolower($t));
+                        $t == "nofollow" ? $local_result['nfl'] = 'nf' : '';
+                        $t == "noindex" ? $local_result['nix'] = 'ni' : '';
+                    }
+                }
             }
         }
-
         $data =  phpQuery::newDocument($document);
         $hook = false;
         if (count($data->find('a'))) {
