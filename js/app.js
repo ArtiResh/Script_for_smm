@@ -25,6 +25,7 @@ app.config(['$httpProvider', function ($httpProvider) {
 app.controller('MainCtrl', ['$scope', '$filter', '$http', '$timeout', function ($scope, $filter, $http, $timeout) {
     $scope.showLive = false;
     $scope.showDead = false;
+    $scope.showHand = false;
     $scope.showResult = false;
     $scope.loading = false;
     $scope.sofisticatedCheck = true;
@@ -46,16 +47,27 @@ app.controller('MainCtrl', ['$scope', '$filter', '$http', '$timeout', function (
 
 
     $scope.checker = function (type) {
-        type === "showLive" ? targeded = $scope.filteredLink.live : targeded = $scope.filteredLink.dead;
+        if(type === "showLive") {
+            targeded = $scope.filteredLink.live;
+            $scope.showLive = true;
+            $scope.showDead = false;
+            $scope.showHand = false;
+        }
+        else if(type === "showDead") {
+            targeded = $scope.filteredLink.dead;
+            $scope.showLive = false;
+            $scope.showDead = true;
+            $scope.showHand = false;
+        }
+        else{
+            targeded = $scope.filteredLink.hand;
+            $scope.showLive = false;
+            $scope.showDead = false;
+            $scope.showHand = true;
+        }
         $scope.positions = {start: 1, end: 20, count: targeded.length};
         targeded.length > 19 ? $scope.More15 = true : $scope.More15 = false;
         $scope.Less15 = false;
-        $scope.showLive = true;
-        $scope.showDead = false;
-        if (type != "showLive") {
-            $scope.showLive = false;
-            $scope.showDead = true;
-        }
     };
 
     $scope.shidden = function () {
@@ -108,9 +120,10 @@ app.controller('MainCtrl', ['$scope', '$filter', '$http', '$timeout', function (
         $scope.filteredLink.nofollow = $filter('filter')(flinks, {nfl: 'nf'});
         $scope.filteredLink.noindex = $filter('filter')(flinks, {nix: 'ni'});
         $scope.filteredLink.redirect = $filter('filter')(flinks, {rd: 'rd'});
+        $scope.filteredLink.hand = $filter('filter')(flinks, {live: 'handed'});
         itter = 0;
 
-        var gramma = String($scope.filteredLink.live.length + $scope.filteredLink.dead.length);
+        var gramma = String($scope.filteredLink.live.length + $scope.filteredLink.dead.length + $scope.filteredLink.hand);
         (gramma != '11' && gramma.substr(gramma.length - 1, 1) == "1") ? $scope.grammaticFormHeader = 'поста' : $scope.grammaticFormHeader = 'постов';
         $scope.excel($scope.ExcelLoad);
 
@@ -148,6 +161,9 @@ app.controller('MainCtrl', ['$scope', '$filter', '$http', '$timeout', function (
                     $scope.textTip = "Живые ссылки на страницы к постам (чистые)";
                     break;
                 case 'dead':
+                    $scope.textTip = "Удаленные ссылки на страницы к постам";
+                    break;
+                case 'hand':
                     $scope.textTip = "Удаленные ссылки на страницы к постам";
                     break;
                 case 'nfl':

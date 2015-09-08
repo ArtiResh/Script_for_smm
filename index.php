@@ -82,6 +82,12 @@
                 <span class="headblock_count" ng-if=!(showResult)>0</span>
                 <span class="headblock_count">{{filteredLink.dead.length}}</span>
             </a>
+            <a href="javascript:none;" ng-click="checker('showHand')" class="subheader_link del"
+               ng-class="{'chosen':showHand}">
+                <span class="slable">Ручная проверка</span>
+                <span class="headblock_count" ng-if=!(showResult)>0</span>
+                <span class="headblock_count">{{filteredLink.hand.length}}</span>
+            </a>
         </div>
         <div class="resultblock">
             <div class="loader" ng-show="loading">
@@ -128,8 +134,16 @@
                     </div>
                 </div>
                 <div class="shadow"></div>
-                <div ng-show="sofisticatedCheck" class="add_info">
+            </div>
+            <div ng-repeat="link in filteredLink.hand | customFilter:positions" ng-show="showHand" class="el_list_link">
+                <div class="number" ng-bind="$index+positions.start">
                 </div>
+                <div class="link">
+                    <div>
+                        <a href={{link.url}} target="_blank"><p>{{link.url}}</p></a>
+                    </div>
+                </div>
+                <div class="shadow"></div>
             </div>
         </div>
     </div>
@@ -157,7 +171,8 @@
         </div>
         <div ng-show="showDead" ng-class="{'del_lable':showDead}">
             <span clip-copy="joiner(filteredLink.dead)" class="clicker" ng-click="tips('dead',filteredLink.dead.length)">Скопировать все удаленные</span></div>
-
+        <div ng-show="showHand" ng-class="{'del_lable':showHand}">
+            <span clip-copy="joiner(filteredLink.hand)" class="clicker" ng-click="tips('hand',filteredLink.hand.length)">Скопировать все для ручной проверки.</span></div>
 
         <div class="btn_status hidden" ng-show="showSaveMenu()">
             <ul>
