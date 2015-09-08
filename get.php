@@ -31,10 +31,10 @@ $callback = function ($document, $url, $code, $target) {
             }
         }
         $data =  phpQuery::newDocument($document);
+
         $hook = false;
         if (count($data->find('a'))) {
             foreach (pq('a') as $a) {
-
                 if (stripos(pq($a)->attr('href'), $target)) {
 
                     stripos(pq($a)->attr('href'), $target) > 12 ? $local_result['rd'] = 'rd' : $local_result['rd'] = '';
@@ -53,6 +53,7 @@ $callback = function ($document, $url, $code, $target) {
                 }
             }
         }
+        unset($a);
         if(count($data->find('span'))){
             foreach (pq('span') as $span) {
                 if (stripos(pq($span)->attr('onclick'), $target)&&!$hook) {
@@ -61,6 +62,7 @@ $callback = function ($document, $url, $code, $target) {
                 }
             }
         }
+        unset($span);
         if(count($data->find('table'))){
             foreach (pq('table') as $table) {
                 if (stripos(pq($table)->text(), $target)&&!$hook) {
@@ -69,6 +71,7 @@ $callback = function ($document, $url, $code, $target) {
                 }
             }
         }
+        unset($table);
         if (!$hook&&stripos($data->text(), $target)) {
             $local_result['rd'] = 'rd';
             $hook = true;
@@ -81,6 +84,7 @@ $callback = function ($document, $url, $code, $target) {
         ($local_result['rd'] != 'rd'&&$local_result['nix'] != 'ni'&&$local_result['nfl'] != 'nf')?$local_result['clear'] = true:'';
         $hook?$local_result['live'] = true:$local_result['live'] = false;
         unset($data);
+        phpQuery::unloadDocuments();
     }
     else {
         $local_result['live'] = 'handed';

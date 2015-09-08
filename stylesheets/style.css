@@ -606,12 +606,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   width: 21.5vw;
   cursor: pointer;
   z-index: 3;
+  opacity: 0.9;
 }
-/* line 507, ../sass/style.scss */
+/* line 508, ../sass/style.scss */
 .main_wrapper .btn_copy > div {
   width: 17vw;
 }
-/* line 510, ../sass/style.scss */
+/* line 511, ../sass/style.scss */
 .main_wrapper .btn_copy .info_tip {
   position: absolute;
   opacity: 0;
@@ -625,7 +626,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: 4vw;
   background-color: #000;
 }
-/* line 523, ../sass/style.scss */
+/* line 524, ../sass/style.scss */
 .main_wrapper .btn_copy .info_tip.slide-top {
   -webkit-transition: all 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -moz-transition: all 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -641,7 +642,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   opacity: 1;
   /* easeOutQuad */
 }
-/* line 538, ../sass/style.scss */
+/* line 539, ../sass/style.scss */
 .main_wrapper .btn_copy .info_tip.slide-bottom {
   -webkit-transition: all 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -moz-transition: all 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -657,27 +658,27 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   opacity: 0;
   /* easeOutQuad */
 }
-/* line 553, ../sass/style.scss */
+/* line 554, ../sass/style.scss */
 .main_wrapper .btn_copy .info_tip p {
   opacity: 1;
 }
-/* line 557, ../sass/style.scss */
+/* line 558, ../sass/style.scss */
 .main_wrapper .btn_copy.deleted {
   width: 20.5vw;
 }
-/* line 559, ../sass/style.scss */
+/* line 560, ../sass/style.scss */
 .main_wrapper .btn_copy.deleted .del_lable {
   width: 19.5vw;
 }
-/* line 564, ../sass/style.scss */
+/* line 565, ../sass/style.scss */
 .main_wrapper .btn_copy.handed {
   width: 26.9vw;
 }
-/* line 566, ../sass/style.scss */
+/* line 567, ../sass/style.scss */
 .main_wrapper .btn_copy.handed .hand_lable {
   width: 26vw;
 }
-/* line 570, ../sass/style.scss */
+/* line 571, ../sass/style.scss */
 .main_wrapper .btn_copy .btn_status {
   position: absolute;
   z-index: 10;
@@ -691,18 +692,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   text-align: left;
   display: none;
 }
-/* line 584, ../sass/style.scss */
+/* line 585, ../sass/style.scss */
 .main_wrapper .btn_copy .btn_status ul {
   list-style: none;
   padding: 0.3vw 0 0 1.2vw;
 }
-/* line 587, ../sass/style.scss */
+/* line 588, ../sass/style.scss */
 .main_wrapper .btn_copy .btn_status ul li {
   padding-bottom: 0.7vw;
   width: 100%;
   cursor: pointer;
 }
-/* line 591, ../sass/style.scss */
+/* line 592, ../sass/style.scss */
 .main_wrapper .btn_copy .btn_status ul li span {
   float: right;
   margin-right: 2.1vw;
@@ -711,7 +712,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-size: 0.9vw;
   margin-top: 0.1vw;
 }
-/* line 607, ../sass/style.scss */
+/* line 608, ../sass/style.scss */
 .main_wrapper .underscription {
   color: #000;
   font-family: "Museo Sans Cyrl 300";
@@ -722,12 +723,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   position: relative;
   left: -1.3vw;
 }
-/* line 616, ../sass/style.scss */
+/* line 617, ../sass/style.scss */
 .main_wrapper .underscription a {
   color: #000;
 }
 
-/* line 623, ../sass/style.scss */
+/* line 624, ../sass/style.scss */
 footer {
   height: 5vw;
   padding: 0.5vw 5.75vw 3vw 7.75vw;
@@ -736,26 +737,26 @@ footer {
   font-family: "Museo Sans Cyrl 100";
   font-size: 1.1vw;
 }
-/* line 630, ../sass/style.scss */
+/* line 631, ../sass/style.scss */
 footer > div {
   display: inline-block;
 }
-/* line 632, ../sass/style.scss */
+/* line 633, ../sass/style.scss */
 footer > div a {
   color: #696969;
   height: 1.5vw;
 }
-/* line 637, ../sass/style.scss */
+/* line 638, ../sass/style.scss */
 footer > div p {
   height: 1.6vw;
 }
-/* line 641, ../sass/style.scss */
+/* line 642, ../sass/style.scss */
 footer .for {
   float: right;
   text-align: right;
 }
 
-/* line 647, ../sass/style.scss */
+/* line 648, ../sass/style.scss */
 .clicker {
   position: relative;
   z-index: 8;

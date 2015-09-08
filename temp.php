@@ -12,9 +12,9 @@ $params = [
 //    "http://cars99.ru/forum/viewtopic.php?f=31&t=675&p=1971#p1971",
 //    "http://forum-obovsem.com/viewtopic.php?f=232&t=4183&p=47798#p47798",
 //    "http://www.apoi.ru/forum/viewtopic.php?f=251&t=686&p=2398#p2398",
-    "http://webladies.ru/forum/%D0%BA%D1%80%D0%B0%D1%81%D0%BE%D1%82%D0%B0-4/%D0%BB%D1%83%D1%87%D1%88%D0%B5%D0%B5-%D1%81%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B2%D0%BE-%D0%BE%D1%82-%D0%B2%D1%8B%D0%BF%D0%B0%D0%B4%D0%B5%D0%BD%D0%B8%D1%8F-%D0%B2%D0%BE%D0%BB%D0%BE%D1%81-799.html"];
+    "http://lady-x.ru/forum/index.php/topic/37-%D0%B2%D0%BE%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B2%D0%BE%D0%BB%D0%BE%D1%81/page__gopid__974#entry974"];
 //$start = microtime(true);
-$target = "triholog.org";
+$target = "hairlife.ru";
 $result = array();
 
 $callback = function ($document, $url, $code, $target) {
@@ -25,24 +25,26 @@ $callback = function ($document, $url, $code, $target) {
     $local_result['rd'] = '';
     $local_result['clear'] = false;
     if($code === 200) {
-        $tags = get_meta_tags($url);
-
-        foreach ($tags as $tag) {
-            $tag = explode(',',$tag);
-            foreach ($tag as $t){
-                $t = trim(mb_strtolower($t));
-                $t == "nofollow" ? $local_result['nfl'] = 'nf' : '';
-                $t == "noindex" ? $local_result['nix'] = 'ni' : '';
+        if($tags = @get_meta_tags($url)){
+            if(count($tags)) {
+                foreach ($tags as $tag) {
+                    $tag = explode(',', $tag);
+                    foreach ($tag as $t) {
+                        $t = trim(mb_strtolower($t));
+                        $t == "nofollow" ? $local_result['nfl'] = 'nf' : '';
+                        $t == "noindex" ? $local_result['nix'] = 'ni' : '';
+                    }
+                }
             }
         }
         $data =  phpQuery::newDocument($document);
-        var_dump($data);
+        echo'<pre>';
+var_dump($data);
+        echo'<pre>';
+
         $hook = false;
         if (count($data->find('a'))) {
             foreach (pq('a') as $a) {
-//                echo '<pre>';
-//                var_dump(pq($a));
-//                echo '<pre>';
                 if (stripos(pq($a)->attr('href'), $target)) {
 
                     stripos(pq($a)->attr('href'), $target) > 12 ? $local_result['rd'] = 'rd' : $local_result['rd'] = '';
@@ -61,14 +63,32 @@ $callback = function ($document, $url, $code, $target) {
                 }
             }
         }
+        unset($a);
         if(count($data->find('span'))){
             foreach (pq('span') as $span) {
-                if (stripos(pq($span)->attr('onclick'), $target)) {
+                if (stripos(pq($span)->attr('onclick'), $target)&&!$hook) {
                     $local_result['rd'] = 'rd';
                     $hook = true;
                 }
             }
         }
+        unset($span);
+        if(count($data->find('table'))){
+            foreach (pq('table') as $table) {
+                if (stripos(pq($table)->text(), $target)&&!$hook) {
+                    $local_result['rd'] = 'rd';
+                    $hook = true;
+                }
+            }
+        }
+        unset($table);
+        if (!$hook&&stripos($data->text(), $target)) {
+            $local_result['rd'] = 'rd';
+            $hook = true;
+        }
+        echo'<pre>';
+        var_dump($data->text());
+        echo'<pre>';
         if (count($data->find('noindex'))){
             foreach (pq('noindex') as $noindex) {
                 if (stripos(pq($noindex)->text(), $target))$local_result['nix'] = 'ni';
@@ -77,6 +97,7 @@ $callback = function ($document, $url, $code, $target) {
         ($local_result['rd'] != 'rd'&&$local_result['nix'] != 'ni'&&$local_result['nfl'] != 'nf')?$local_result['clear'] = true:'';
         $hook?$local_result['live'] = true:$local_result['live'] = false;
         unset($data);
+        phpQuery::unloadDocuments();
     }
     else {
         $local_result['live'] = 'handed';
