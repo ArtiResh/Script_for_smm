@@ -130,6 +130,9 @@ app.controller('MainCtrl', ['$scope', '$filter', '$http', '$timeout', function (
     };
 
     $scope.parsedServe = function (type) {
+        $scope.showLive = false;
+        $scope.showDead = false;
+        $scope.showHand = false;
         if ($scope.canStart) {
             var links = $scope.list_links.split(/\n/);
             if(type === false)
