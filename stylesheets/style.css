@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* line 5, ../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -21,64 +21,64 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
 @font-face {
   font-family: "Museo Sans Cyrl 100";
-  src: url('../fonts/MuseoSansCyrl_100.woff?1440710851') format('woff'), url('../fonts/MuseoSansCyrl_100.otf?1440187991') format('opentype'), url('../fonts/MuseoSansCyrl_100.ttf?1440710850') format('truetype');
+  src: url('../fonts/MuseoSansCyrl_100.woff?1440750480') format('woff'), url('../fonts/MuseoSansCyrl_100.otf?1440750480') format('opentype'), url('../fonts/MuseoSansCyrl_100.ttf?1440750480') format('truetype');
 }
 @font-face {
   font-family: "Museo Sans Cyrl 300";
-  src: url('../fonts/MuseoSansCyrl_300.woff?1440710857') format('woff'), url('../fonts/MuseoSansCyrl_300.otf?1440187991') format('opentype'), url('../fonts/MuseoSansCyrl_300.ttf?1440710857') format('truetype');
+  src: url('../fonts/MuseoSansCyrl_300.woff?1440750480') format('woff'), url('../fonts/MuseoSansCyrl_300.otf?1440750480') format('opentype'), url('../fonts/MuseoSansCyrl_300.ttf?1440750480') format('truetype');
 }
 @font-face {
   font-family: "Museo Sans Cyrl 500";
-  src: url('../fonts/MuseoSansCyrl_300.woff?1440710857') format('woff'), url('../fonts/MuseoSansCyrl_300.otf?1440187991') format('opentype'), url('../fonts/MuseoSansCyrl_300.ttf?1440710857') format('truetype');
+  src: url('../fonts/MuseoSansCyrl_300.woff?1440750480') format('woff'), url('../fonts/MuseoSansCyrl_300.otf?1440750480') format('opentype'), url('../fonts/MuseoSansCyrl_300.ttf?1440750480') format('truetype');
 }
 @font-face {
   font-family: "Minion Pro Regular";
-  src: url('../fonts/MinionPro-Regular.woff?1440793049') format('woff'), url('../fonts/MinionPro-Regular.otf?1440793049') format('opentype'), url('../fonts/MinionPro-Regular.ttf?1440793049') format('truetype');
+  src: url('../fonts/MinionPro-Regular.woff?1440757172') format('woff'), url('../fonts/MinionPro-Regular.otf?1265284842') format('opentype'), url('../fonts/MinionPro-Regular.ttf?1440757172') format('truetype');
 }
 @keyframes slideInDown {
   from {
@@ -422,7 +422,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .main_wrapper .out .subheader .del {
   width: 10vw;
 }
-/* line 344, ../sass/style.scss */
+/* line 343, ../sass/style.scss */
+.main_wrapper .out .subheader .hand {
+  width: 13vw;
+}
+/* line 347, ../sass/style.scss */
 .main_wrapper .out .resultblock {
   margin: 1.2vw 0 0 -2vw;
   width: 43.5vw;
@@ -430,7 +434,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   position: relative;
   z-index: 4;
 }
-/* line 350, ../sass/style.scss */
+/* line 353, ../sass/style.scss */
 .main_wrapper .out .resultblock .loader {
   width: 6vw;
   height: 6vw;
@@ -439,17 +443,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   top: 10vw;
   left: 13vw;
 }
-/* line 358, ../sass/style.scss */
+/* line 361, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link {
   margin-top: 0.56vw;
   height: 1.25vw;
 }
-/* line 361, ../sass/style.scss */
+/* line 364, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link > div {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 365, ../sass/style.scss */
+/* line 368, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .number {
   color: #CDCDCD;
   font-family: "Museo Sans Cyrl 100";
@@ -458,18 +462,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   text-align: center;
   margin-left: -1vw;
 }
-/* line 373, ../sass/style.scss */
+/* line 376, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .link {
   position: relative;
   overflow-x: hidden;
   width: 33vw;
   height: 1.2vw;
 }
-/* line 378, ../sass/style.scss */
+/* line 381, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .link div {
   overflow: hidden;
 }
-/* line 381, ../sass/style.scss */
+/* line 384, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .link a {
   text-decoration: none;
   position: absolute;
@@ -478,11 +482,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-family: "Museo Sans Cyrl 300";
   font-size: 1.1vw;
 }
-/* line 388, ../sass/style.scss */
+/* line 391, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .link a p {
   position: absolute;
 }
-/* line 394, ../sass/style.scss */
+/* line 397, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .shadow {
   position: relative;
   margin-left: 0.3vw;
@@ -490,12 +494,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: 1.2vw;
   box-shadow: -1.3vw 0 1.2vw 0.3vw #fff;
 }
-/* line 401, ../sass/style.scss */
+/* line 404, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .add_info {
   margin-left: 0.4vw;
   height: 1vw;
 }
-/* line 404, ../sass/style.scss */
+/* line 407, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .add_info span {
   position: relative;
   color: #38BEA9;
@@ -505,7 +509,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   padding-right: 0.3vw;
   cursor: pointer;
 }
-/* line 412, ../sass/style.scss */
+/* line 415, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .add_info span:after {
   display: none;
   text-align: center;
@@ -522,7 +526,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   background-color: rgba(173, 173, 173, 0.15);
   border-radius: 0.4vw;
 }
-/* line 428, ../sass/style.scss */
+/* line 431, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .add_info span:before {
   content: "";
   opacity: 0;
@@ -536,12 +540,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   border-right: 0.5vw solid transparent;
   border-bottom: 0;
 }
-/* line 441, ../sass/style.scss */
+/* line 444, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .add_info span:hover:after, .main_wrapper .out .resultblock .el_list_link .add_info span:hover:before {
   display: block;
   opacity: 0.9;
 }
-/* line 446, ../sass/style.scss */
+/* line 449, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .add_info .rd:after {
   content: "Ссылка с редиректом";
   width: 10vw;
@@ -549,15 +553,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   left: -5vw;
   top: -1.88vw;
 }
-/* line 453, ../sass/style.scss */
+/* line 456, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .add_info .nix:after {
   content: "Ссылка с аттрибутом noindex";
 }
-/* line 456, ../sass/style.scss */
+/* line 459, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .add_info .nfl:after {
   content: "Ссылка с аттрибутом nofollow";
 }
-/* line 463, ../sass/style.scss */
+/* line 466, ../sass/style.scss */
 .main_wrapper .next_prev {
   z-index: 3;
   position: relative;
@@ -566,7 +570,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin-left: 6.5vw;
   height: 3vw;
 }
-/* line 470, ../sass/style.scss */
+/* line 473, ../sass/style.scss */
 .main_wrapper .next_prev a {
   position: absolute;
   color: #000;
@@ -576,15 +580,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-family: "Museo Sans Cyrl 300";
   border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
 }
-/* line 478, ../sass/style.scss */
+/* line 481, ../sass/style.scss */
 .main_wrapper .next_prev a span {
   font-family: "Minion Pro Regular";
 }
-/* line 482, ../sass/style.scss */
+/* line 485, ../sass/style.scss */
 .main_wrapper .next_prev #next {
   left: 25.3vw;
 }
-/* line 486, ../sass/style.scss */
+/* line 489, ../sass/style.scss */
 .main_wrapper .btn_wrapper {
   position: absolute;
   background: #ffffff;
@@ -594,7 +598,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   left: 46vw;
   top: 50vw;
 }
-/* line 495, ../sass/style.scss */
+/* line 498, ../sass/style.scss */
 .main_wrapper .btn_copy {
   position: relative;
   margin-left: 7vw;
@@ -602,11 +606,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   cursor: pointer;
   z-index: 3;
 }
-/* line 503, ../sass/style.scss */
+/* line 506, ../sass/style.scss */
 .main_wrapper .btn_copy > div {
   width: 17vw;
 }
-/* line 506, ../sass/style.scss */
+/* line 509, ../sass/style.scss */
 .main_wrapper .btn_copy .info_tip {
   position: absolute;
   opacity: 0;
@@ -620,7 +624,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: 4vw;
   background-color: #000;
 }
-/* line 519, ../sass/style.scss */
+/* line 522, ../sass/style.scss */
 .main_wrapper .btn_copy .info_tip.slide-top {
   -webkit-transition: all 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -moz-transition: all 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -636,7 +640,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   opacity: 1;
   /* easeOutQuad */
 }
-/* line 534, ../sass/style.scss */
+/* line 537, ../sass/style.scss */
 .main_wrapper .btn_copy .info_tip.slide-bottom {
   -webkit-transition: all 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -moz-transition: all 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -652,19 +656,27 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   opacity: 0;
   /* easeOutQuad */
 }
-/* line 549, ../sass/style.scss */
+/* line 552, ../sass/style.scss */
 .main_wrapper .btn_copy .info_tip p {
   opacity: 1;
 }
-/* line 553, ../sass/style.scss */
+/* line 556, ../sass/style.scss */
 .main_wrapper .btn_copy.deleted {
   width: 20.5vw;
 }
-/* line 555, ../sass/style.scss */
+/* line 558, ../sass/style.scss */
 .main_wrapper .btn_copy.deleted .del_lable {
   width: 19.5vw;
 }
-/* line 559, ../sass/style.scss */
+/* line 563, ../sass/style.scss */
+.main_wrapper .btn_copy.handed {
+  width: 26.9vw;
+}
+/* line 565, ../sass/style.scss */
+.main_wrapper .btn_copy.handed .hand_lable {
+  width: 26vw;
+}
+/* line 569, ../sass/style.scss */
 .main_wrapper .btn_copy .btn_status {
   position: absolute;
   z-index: 10;
@@ -678,18 +690,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   text-align: left;
   display: none;
 }
-/* line 573, ../sass/style.scss */
+/* line 583, ../sass/style.scss */
 .main_wrapper .btn_copy .btn_status ul {
   list-style: none;
   padding: 0.3vw 0 0 1.2vw;
 }
-/* line 576, ../sass/style.scss */
+/* line 586, ../sass/style.scss */
 .main_wrapper .btn_copy .btn_status ul li {
   padding-bottom: 0.7vw;
   width: 100%;
   cursor: pointer;
 }
-/* line 580, ../sass/style.scss */
+/* line 590, ../sass/style.scss */
 .main_wrapper .btn_copy .btn_status ul li span {
   float: right;
   margin-right: 2.1vw;
@@ -698,7 +710,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-size: 0.9vw;
   margin-top: 0.1vw;
 }
-/* line 596, ../sass/style.scss */
+/* line 606, ../sass/style.scss */
 .main_wrapper .underscription {
   color: #000;
   font-family: "Museo Sans Cyrl 300";
@@ -709,12 +721,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   position: relative;
   left: -1.3vw;
 }
-/* line 605, ../sass/style.scss */
+/* line 615, ../sass/style.scss */
 .main_wrapper .underscription a {
   color: #000;
 }
 
-/* line 612, ../sass/style.scss */
+/* line 622, ../sass/style.scss */
 footer {
   height: 5vw;
   padding: 0.5vw 5.75vw 3vw 7.75vw;
@@ -723,26 +735,26 @@ footer {
   font-family: "Museo Sans Cyrl 100";
   font-size: 1.1vw;
 }
-/* line 619, ../sass/style.scss */
+/* line 629, ../sass/style.scss */
 footer > div {
   display: inline-block;
 }
-/* line 621, ../sass/style.scss */
+/* line 631, ../sass/style.scss */
 footer > div a {
   color: #696969;
   height: 1.5vw;
 }
-/* line 626, ../sass/style.scss */
+/* line 636, ../sass/style.scss */
 footer > div p {
   height: 1.6vw;
 }
-/* line 630, ../sass/style.scss */
+/* line 640, ../sass/style.scss */
 footer .for {
   float: right;
   text-align: right;
 }
 
-/* line 636, ../sass/style.scss */
+/* line 646, ../sass/style.scss */
 .clicker {
   position: relative;
   z-index: 8;

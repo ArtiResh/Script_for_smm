@@ -82,7 +82,7 @@
                 <span class="headblock_count" ng-if=!(showResult)>0</span>
                 <span class="headblock_count">{{filteredLink.dead.length}}</span>
             </a>
-            <a href="javascript:none;" ng-click="checker('showHand')" class="subheader_link del"
+            <a href="javascript:none;" ng-click="checker('showHand')" class="subheader_link hand"
                ng-class="{'chosen':showHand}">
                 <span class="slable">Ручная проверка</span>
                 <span class="headblock_count" ng-if=!(showResult)>0</span>
@@ -153,12 +153,12 @@
         <a href="javascript:none;" ng-click="showMore()" ng-show="More15" id="next">следующие 20 <span>→</span></a>
     </div>
     <div class="btn_wrapper"></div>
-    <div class="btn_copy" ng-class="{'active':showResult,'deleted':showDead}">
+    <div class="btn_copy" ng-class="{'active':showResult,'deleted':showDead,'handed':showHand}">
         <div class="info_tip" ng-class=showTip><p>{{textTip}}
             скопированы в буфер обмена</p>
         </div>
-        <div ng-show="!showDead"><span clip-copy="joiner(filteredLink.live)" ng-click="tips('live',filteredLink.live.length)" class="clicker">Скопировать все живые</span></div>
-        <div class="arrow" ng-show="!showDead">
+        <div ng-show="showLive"><span clip-copy="joiner(filteredLink.live)" ng-click="tips('live',filteredLink.live.length)" class="clicker">Скопировать все живые</span></div>
+        <div class="arrow" ng-show="showLive">
             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                  x="0px" y="0px"
                  viewBox="0 0 86.001 86.001" style="enable-background:new 0 0 86.001 86.001;" xml:space="preserve">
@@ -171,8 +171,8 @@
         </div>
         <div ng-show="showDead" ng-class="{'del_lable':showDead}">
             <span clip-copy="joiner(filteredLink.dead)" class="clicker" ng-click="tips('dead',filteredLink.dead.length)">Скопировать все удаленные</span></div>
-        <div ng-show="showHand" ng-class="{'del_lable':showHand}">
-            <span clip-copy="joiner(filteredLink.hand)" class="clicker" ng-click="tips('hand',filteredLink.hand.length)">Скопировать все для ручной проверки.</span></div>
+        <div ng-show="showHand" ng-class="{'hand_lable':showHand}">
+            <span clip-copy="joiner(filteredLink.hand)" class="clicker" ng-click="tips('hand',filteredLink.hand.length)">Скопировать все для ручной проверки</span></div>
 
         <div class="btn_status hidden" ng-show="showSaveMenu()">
             <ul>

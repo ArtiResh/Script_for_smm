@@ -340,6 +340,9 @@
       .del {
         width: 10vw;
       }
+      .hand{
+        width: 13vw;
+      }
     }
     .resultblock {
       margin: 1.2vw 0 0 -2vw;
@@ -555,7 +558,14 @@
       .del_lable{
         width: 19.5vw;
       }
+
     }
+    &.handed{
+      width: 26.9vw;
+      .hand_lable{
+        width: 26vw;
+      }
+  }
     .btn_status {
       position: absolute;
       z-index: 10;
