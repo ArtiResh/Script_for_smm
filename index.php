@@ -71,7 +71,7 @@
         </div>
         <div class="subheader">
             <a href="javascript:none;" ng-click="checker('showLive')" class="subheader_link"
-               ng-class="{'chosen':showLive}">
+               ng-class="{'chosen':showLive&&showResult}">
                 <span class="slable">Живые</span>
                 <span class="headblock_count" ng-if=!(showResult)>0</span>
                 <span class="headblock_count">{{filteredLink.live.length}}</span>

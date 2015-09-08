@@ -23,7 +23,7 @@ app.config(['$httpProvider', function ($httpProvider) {
 }]);
 
 app.controller('MainCtrl', ['$scope', '$filter', '$http', '$timeout', function ($scope, $filter, $http, $timeout) {
-    $scope.showLive = false;
+    $scope.showLive = true;
     $scope.showDead = false;
     $scope.showHand = false;
     $scope.showResult = false;
