@@ -544,7 +544,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 445, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .add_info span:hover:after, .main_wrapper .out .resultblock .el_list_link .add_info span:hover:before {
   display: block;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 /* line 450, ../sass/style.scss */
 .main_wrapper .out .resultblock .el_list_link .add_info .rd:after {
